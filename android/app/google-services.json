@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "256764468509",
+    "firebase_url": "https://avwhiskyapp.firebaseio.com",
+    "project_id": "avwhiskyapp",
+    "storage_bucket": "avwhiskyapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256764468509:android:62717eed2d3640f4e295f4",
+        "android_client_info": {
+          "package_name": "awhiskyapp.aquavitate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256764468509-btmg1f1do8bllsl0icb60qotlu0e5g28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqIpoQl4iIrpxFuc9cffHc4O2qCBOPOko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256764468509-btmg1f1do8bllsl0icb60qotlu0e5g28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256764468509:android:a3f8260fbc26cd63e295f4",
+        "android_client_info": {
+          "package_name": "com.awhiskyapp.aquavitate"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256764468509-vfde350kicpbrdrj7gr227tj328oegaf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.awhiskyapp.aquavitate",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "256764468509-btmg1f1do8bllsl0icb60qotlu0e5g28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqIpoQl4iIrpxFuc9cffHc4O2qCBOPOko"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256764468509-btmg1f1do8bllsl0icb60qotlu0e5g28.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
