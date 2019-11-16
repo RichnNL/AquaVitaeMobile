@@ -19,18 +19,23 @@ const  HomeScreen: React.FC<Props> = (props) => {
   const authentication = useAuthenticationStore();
   const [languages, setLanguages] = useState('');
   const doNothing = ()=> {
-    authentication.logOut();
+    authentication.deleteAccount();
   }
+  const doSomethingElse = () => {
+    authentication.facebookSignIn();
+  };
   return useObserver(() => {
      return <View>
                 <Text>
                 {String(authentication.test)}
                 </Text>
-                
-                
+                <Text>
+                {String(themeStore.isPortrait)}
+                </Text>
+               
                 
                 <AVButton title={String(authentication.loggedIn)} onPress={doNothing}></AVButton>
-              
+                <AVButton title={'Log in'} onPress={doSomethingElse}></AVButton>
             </View>
   });
 }

@@ -41,8 +41,6 @@ class Firebase implements IAuthentication {
             return resolve(true);
         });
     }
-
-
 }
 
 export default new Firebase();

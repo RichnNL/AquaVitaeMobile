@@ -5,27 +5,32 @@ const ERRORCODE = {
            message: 'User canceled sign in process' 
         },
         noAccessToken: {
-            code: -20,
+            code: -11,
             message: 'Failed to acquire access token' 
          },
          loginFailed: {
             code: 0,
             message: 'Login failed' 
          },
+    },
+    register: {
+       screenNameTooShort: {
+          code: -20,
+          message: 'Provide a longer screen name'
+       },
+    },
+    database: {
+       write: {
+          code: -30,
+          message: 'Error writing to database'
+       }
+    },
+    authentication: {
+       loggedOut: {
+          code: -40,
+          message: 'Please Log in'
+       }
     }
-}
-
-// export type ErrorCodeFormatType = {
-//     code: number[],
-//     message: string[],
-// }
-
-// export type ErrorCodeType = {
-//     signIn: ErrorCodeFormatType
-// }
-
-const error = {
-
 }
 
 export default ERRORCODE;

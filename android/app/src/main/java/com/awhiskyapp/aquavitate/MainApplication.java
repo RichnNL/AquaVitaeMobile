@@ -27,7 +27,7 @@ import io.invertase.firebase.messaging.RNFirebaseMessagingPackage;
 import io.invertase.firebase.notifications.RNFirebaseNotificationsPackage;
 import io.invertase.firebase.perf.RNFirebasePerformancePackage;
 import io.invertase.firebase.storage.RNFirebaseStoragePackage;
-
+import org.wonday.orientation.OrientationPackage;
 import java.util.List;
 
 public class MainApplication extends MultiDexApplication implements ReactApplication {
@@ -58,6 +58,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
             packages.add(new RNFirebaseNotificationsPackage());
             packages.add(new RNFirebasePerformancePackage());
             packages.add(new RNFirebaseStoragePackage());
+            //packages.add(new OrientationPackage());
         return packages;
     }
 

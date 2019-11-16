@@ -1,11 +1,14 @@
 import firebase from 'react-native-firebase';
 import {IAuthentication} from '../../state/stores/Authentication/AuthenticationStore';
+import {IDatabase} from '../../state/stores/Database/DatabaseStore';
 import { AccessToken, LoginManager } from 'react-native-fbsdk';
 import { GoogleSignin, statusCodes } from '@react-native-community/google-signin';
 import {AUTH} from '../../constants/authentication';
 import ERRORCODE from '../../constants/errorCode';
-
- class Firebase implements IAuthentication {
+import User from '../../types/Users/User';
+import DB from '../../constants/database';
+import RULES from '../../constants/rules';
+ class Firebase implements IAuthentication, IDatabase {
         constructor() {}
         async googleSignIn(): Promise<number> {
             try {
@@ -53,9 +56,13 @@ import ERRORCODE from '../../constants/errorCode';
                 
                 const firebaseUserCredential = await firebase.auth().signInWithCredential(credential);
                 if(firebaseUserCredential.additionalUserInfo!.isNewUser) {
-                      return 1;
+                    const u = firebaseUserCredential.user;
+                    const user: User = {screenName: u.displayName!, location: 'Rotterdam', 
+                motto: 'Go home', picture: u.photoURL!, initials: u.displayName!.slice(0,3)  }
+                this.registerUser(user);  
+                    return 1;
                 } else {
-                      return 1;
+                    return 1;
                 }
               } catch (e) {
                 return ERRORCODE.signIn.loginFailed.code;
@@ -114,6 +121,53 @@ import ERRORCODE from '../../constants/errorCode';
                 return false;
             });
         }
+
+        async deleteAccount(): Promise<number> {
+            var user = firebase.auth().currentUser;
+            if(user) {
+               const accountDeleted = await user!.delete().then(()=> {
+                        return 1;
+                    }).catch(error => {
+                        return ERRORCODE.authentication.loggedOut.code;
+                });
+                return accountDeleted;
+            } else {
+                return  ERRORCODE.database.write.code;
+            }
+            
+        }
+
+        async registerUser(user: User): Promise<number> {
+            if(user.screenName.length < RULES.screenNameMinLength) {
+                return ERRORCODE.register.screenNameTooShort.code;
+            }
+
+            const result = await firebase.firestore().collection(DB.UsersList).doc(user.initials).collection('users').doc(user.screenName)
+            .set(
+                user
+            ).then(result => {
+                return 1;
+            }).catch(error => {
+                return ERRORCODE.database.write.code;
+            });
+
+            return result;
+        } 
+        async updateScreenName(screenName: string): Promise<number> {
+            var user = firebase.auth().currentUser;
+            if(user) {
+               return user.updateProfile({
+                    displayName: screenName,
+                    }).then(function() {
+                    return 1
+                    }).catch(function(error) {
+                    return ERRORCODE.database.write.code;
+                    });
+            } else {
+                return ERRORCODE.authentication.loggedOut.code;
+            }
+        }
+        
  }
 
  export default new Firebase();

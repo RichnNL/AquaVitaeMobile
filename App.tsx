@@ -1,4 +1,4 @@
-import React, {Fragment, useLayoutEffect,  useState} from 'react';
+import React, {Fragment, useLayoutEffect,  useState, useEffect} from 'react';
 import AppContainer from './src/navigation/AppStackNavigation';
 import { useScreens } from "react-native-screens";
 
@@ -26,11 +26,7 @@ import {AuthenticationProvider} from './src/state/stores/Authentication/index';
 useScreens();
 const App = () => {
   const usingHermes = typeof HermesInternal === 'object' && HermesInternal !== null;
-  const [helloworld, setHelloWorld] = useState('');
   
- 
-  
-
   return (<Fragment>
           <ThemeProvider>
             <LanguageProvider>
@@ -39,6 +35,7 @@ const App = () => {
               </AuthenticationProvider>
             </LanguageProvider>
           </ThemeProvider>
+          
           </Fragment>   
   );
 };

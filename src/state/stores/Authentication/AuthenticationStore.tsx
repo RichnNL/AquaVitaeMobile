@@ -15,6 +15,7 @@ export interface IAuthenticationStore  {
   facebookSignIn(): Promise<number>;
   logOut(): Promise<boolean>;
   loginSilently(): any;
+  deleteAccount(): Promise<number>;
 }
 
 export interface IAuthentication  {
@@ -25,6 +26,7 @@ export interface IAuthentication  {
   getEmail(): string;
   getPictureURL(): string;
   logOut(): Promise<boolean>;
+  deleteAccount(): Promise<number>;
 }
 
 const auth: IAuthentication = Firebase;
@@ -51,7 +53,7 @@ const AuthenticationStore: IAuthenticationStore =  {
     async facebookSignIn() {
         try {
          const result = await auth.facebookSignIn();
-         console.log(result + 'FACEBOOOK');
+         this.test = String(result);
          if(result == 1) {
             this.loggedIn = 'facebook';
             LocalStorage.setItem(STORAGEKEY.loginMethodKey, 'facebook');
@@ -61,6 +63,7 @@ const AuthenticationStore: IAuthenticationStore =  {
         }
         return 0;
         } catch {
+            this.test = 'Error';
             return 0;
           }},
     async logOut() {
@@ -77,8 +80,8 @@ const AuthenticationStore: IAuthenticationStore =  {
             return false
         }
     },
-    async loginSilently() {
-      await auth.isLoggedIn().then(async result => {
+    loginSilently() {
+      auth.isLoggedIn().then(async result => {
       if(result) {
         let previousLoginMethod  = await LocalStorage.getItem(STORAGEKEY.loginMethodKey);
         if(previousLoginMethod == 'facebook') {
@@ -90,7 +93,13 @@ const AuthenticationStore: IAuthenticationStore =  {
         this.userName = auth.getDisplayName();
       }
       });
+  },
+  async deleteAccount(): Promise<number> {
+        const result = await auth.deleteAccount();
+        this.test = String(result);
+        return result;
   }
+  
 }
 
 const createAuthenticationStore = () => {
