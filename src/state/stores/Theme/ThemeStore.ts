@@ -19,10 +19,12 @@ const ThemeStore: IThemeStore = {
   lockPortrait(lock: boolean) {
     this.locked = lock;
     if(lock) {
+      this.test = 'called';
     Orientation.lockToPortrait();
       this.isPortrait = true;
     } else {
       this.locked = false;
+      this.test = 'BOTcalled';
     Orientation.unlockAllOrientations();
     } 
   },

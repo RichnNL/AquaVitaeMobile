@@ -1,12 +1,13 @@
-import React, { Fragment, useState } from 'react';
+import React, { Fragment, useState, useEffect } from 'react';
 import {View, Text, Button } from "react-native";
-//import { AVButton } from '../../components/Button/AVButton';
-import PATH from '../../constants/pathData';
-import { AVButton } from '../../components/Button/AVButton';
+import {GoogleButton} from '../../components/Buttons/GoogleButton';
+import {FacebookButton} from '../../components/Buttons/FacebookButton';
 import {useThemeStore} from '../../state/stores/Theme/index';
 import {useLanguageStore} from '../../state/stores/Language/index';
 import { useObserver } from 'mobx-react';
 import { useAuthenticationStore } from '../../state/stores/Authentication/index';
+import BackgroundView from '../../components/Views/BackgroundView';
+import theme from 'styled-theming';
 type Props =  {
   navigation: any;
 }
@@ -14,29 +15,20 @@ type Props =  {
 
 
 const  HomeScreen: React.FC<Props> = (props) => {  
+  
   const themeStore = useThemeStore();
-  const languageStore = useLanguageStore();
-  const authentication = useAuthenticationStore();
-  const [languages, setLanguages] = useState('');
-  const doNothing = ()=> {
-    authentication.deleteAccount();
-  }
-  const doSomethingElse = () => {
-    authentication.facebookSignIn();
-  };
+  useEffect(()=> {
+    themeStore.lockPortrait(true);
+  }, [themeStore]);
+
   return useObserver(() => {
-     return <View>
-                <Text>
-                {String(authentication.test)}
-                </Text>
-                <Text>
-                {String(themeStore.isPortrait)}
-                </Text>
-               
-                
-                <AVButton title={String(authentication.loggedIn)} onPress={doNothing}></AVButton>
-                <AVButton title={'Log in'} onPress={doSomethingElse}></AVButton>
-            </View>
+     return <BackgroundView>
+       <Text>{String(themeStore.locked)}</Text>
+       <Text>{String(themeStore.isPortrait)}</Text>
+       <Text>{String(themeStore.test)}</Text>
+              <GoogleButton ></GoogleButton>
+              <FacebookButton></FacebookButton>
+            </BackgroundView>
   });
 }
 

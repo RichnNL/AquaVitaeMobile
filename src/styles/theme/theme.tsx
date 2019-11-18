@@ -9,6 +9,11 @@ export const backgroundColor = theme.variants('theme', 'type', {
     secondary: {light: Colors.primary.light,  dark: Colors.secondary.dark }
   });
 
+export const statusBarContent = theme('theme', {
+  light: 'dark-content',
+  dark: 'light-content'
+})
+
 export const backgroundColorHover = theme.variants('theme', 'type', {
     primary: {light: Colors.secondary.default, dark: Colors.primary.dark },
     secondary: {light: Colors.primary.dark, dark: Colors.primary.dark }

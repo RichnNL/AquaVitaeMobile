@@ -1,27 +1,11 @@
-import React, {Fragment, useLayoutEffect,  useState, useEffect} from 'react';
+import React, {Fragment} from 'react';
 import AppContainer from './src/navigation/AppStackNavigation';
 import { useScreens } from "react-native-screens";
-
-
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
-
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import {ThemeProvider} from './src/state/stores/Theme/index';
 import {LanguageProvider} from './src/state/stores/Language/index';
 import {AuthenticationProvider} from './src/state/stores/Authentication/index';
+import {StatusProvider} from './src/state/providers/StatusProvider';
+import {DatabaseProvider} from './src/state/providers/DatabaseProvider';
 
 useScreens();
 const App = () => {
@@ -31,11 +15,14 @@ const App = () => {
           <ThemeProvider>
             <LanguageProvider>
               <AuthenticationProvider>
-                <AppContainer/>
+                <DatabaseProvider>
+                  <StatusProvider>
+                  <AppContainer/>
+                  </StatusProvider>
+                </DatabaseProvider>
               </AuthenticationProvider>
             </LanguageProvider>
           </ThemeProvider>
-          
           </Fragment>   
   );
 };

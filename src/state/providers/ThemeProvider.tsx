@@ -13,11 +13,9 @@ export interface IThemeProvider {
 
 const ThemeToggleProvider: React.FC<IThemeProvider> = ({children}) => {   
   useEffect(()=> {
-    Orientation.unlockAllOrientations();
     Orientation.addOrientationListener(_orientationDidChange);
   }, []);
   const _orientationDidChange = (orientation) => {
-    themeStore.test = orientation;
     if (orientation === 'PORTRAIT') {
       themeStore.isPortrait = true;
     } else {

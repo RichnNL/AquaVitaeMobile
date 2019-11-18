@@ -10,6 +10,7 @@ export interface IAuthenticationStore  {
   loggedIn: loggedInWithType;
   userName: string;
   picture: string;
+  isLoading: boolean;
   test: string;
   googleSignIn(): Promise<number>;
   facebookSignIn(): Promise<number>;
@@ -33,12 +34,15 @@ const auth: IAuthentication = Firebase;
 
 const AuthenticationStore: IAuthenticationStore =  {
   loggedIn: false,
+  isLoading: false,
   userName: '',
   picture: '',
   test: 'set',
   async googleSignIn() {
     try {
+        this.isLoading = true;
         const result = await auth.googleSignIn();
+        this.isLoading = false;
         if(result == 1) {
            this.loggedIn = 'google';
            LocalStorage.setItem(STORAGEKEY.loginMethodKey, 'google');
@@ -48,13 +52,16 @@ const AuthenticationStore: IAuthenticationStore =  {
        }
        return 0;
        } catch {
-           return 0;
+          this.isLoading = false;
+          return 0;
          }},
     async facebookSignIn() {
         try {
-         const result = await auth.facebookSignIn();
-         this.test = String(result);
-         if(result == 1) {
+        this.isLoading = true;
+        const result = await auth.facebookSignIn();
+        this.isLoading = false;
+        this.test = String(result);
+        if(result == 1) {
             this.loggedIn = 'facebook';
             LocalStorage.setItem(STORAGEKEY.loginMethodKey, 'facebook');
             this.picture = auth.getPictureURL();
@@ -63,6 +70,7 @@ const AuthenticationStore: IAuthenticationStore =  {
         }
         return 0;
         } catch {
+            this.isLoading = false;
             this.test = 'Error';
             return 0;
           }},

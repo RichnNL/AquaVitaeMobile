@@ -28,8 +28,3 @@ export const  AVButton: React.FC<Props> = (props) => {
     type: 'primary',
     btnSize: 'medium',
   };
-
-  // <StyledButton title={props.title}  type={props.type} btnSize={props.btnSize} 
-  //    onPress={props.onPress}>
-   
-  //      </StyledButton>

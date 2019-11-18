@@ -7,7 +7,7 @@ import User from '../../../types/Users/User';
 
 
 export interface IDatabaseStore  {
- 
+ isLoading: boolean;
 }
 
 export interface IDatabase  {
@@ -18,7 +18,7 @@ export interface IDatabase  {
 //const database: IDatabase = Firebase;
 
 const DatabaseStore: IDatabaseStore =  {
-
+  isLoading: false,
 }
 
 const createDatabaseStore = () => {
