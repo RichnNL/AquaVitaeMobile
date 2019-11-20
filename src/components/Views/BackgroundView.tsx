@@ -3,24 +3,28 @@ import {useAuthenticationStore} from '../../state/stores/Authentication/index';
 import {useThemeStore} from '../../state/stores/Theme/index';
 import { GoogleSigninButton } from '@react-native-community/google-signin';
 import PATH from '../../constants/pathData';
-import {Container, StatusBar} from '../../styles/StyledView';
-type Props =  {
-    children?: React.ReactNode | any; 
+import {Container} from '../../styles/StyledView';
+import StyledStatusBar from '../../styles/StyledStatusBar';
+import VariantType from '../../types/style/Variant';
+import {StyledBackground} from '../../styles/StyledBackground';
+type Props  = VariantType & {
+  
 }
 
 
 const  BackgroundView: React.FC<Props> = (props) => { 
-//   const [buttonDisabled, setButtonDisabled] = useState(false);
-//   const signIn = () => { 
-    
-//     }
+
   return (
         <Fragment>
-            <StatusBar/>
-                <Container type={'primary'}>
+            <StyledStatusBar variant={props.variant}/>
+                <Container variant={props.variant}>
                     {props.children}
                 </Container> 
         </Fragment>   )
   }
+
+  BackgroundView.defaultProps = {
+    variant: 'primary',
+  };
 
   export default BackgroundView;

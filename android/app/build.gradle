@@ -229,6 +229,7 @@ dependencies {
       // we manually add it as a dependency below with a custom version
       exclude group: 'com.android.support', module: 'customtabs'
     }
+    
 
     // Authentication
     implementation "com.google.firebase:firebase-auth"

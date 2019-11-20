@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Button } from "react-native";
-//import { AVButton } from '../../components/Button/AVButton';
+//import { ButtonAV } from '../../components/Button/ButtonAV';
 import PATH from '../../constants/pathData';
 type Props =  {
   navigation: any;

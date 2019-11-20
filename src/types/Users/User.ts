@@ -1,4 +1,4 @@
-type User = {
+type UserType = {
     screenName: string;
     location: string;
     motto?: string;
@@ -6,4 +6,4 @@ type User = {
     initials: string;
 }
 
-export default User;
+export default UserType;

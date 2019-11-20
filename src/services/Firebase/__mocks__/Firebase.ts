@@ -4,9 +4,9 @@ import ERRORCODE from '../../../constants/errorCode';
 class Firebase implements IAuthentication {
     mockSignIn = jest.fn();
     constructor() {
-        this.mockSignIn.mockReturnValueOnce(ERRORCODE.signIn.loginFailed.code)
+        this.mockSignIn.mockReturnValueOnce(ERRORCODE.authentication.loginFailed.code)
         .mockReturnValueOnce(1)
-        .mockReturnValueOnce(ERRORCODE.signIn.loginFailed.code)
+        .mockReturnValueOnce(ERRORCODE.authentication.loginFailed.code)
         .mockReturnValueOnce(1);
     }
         

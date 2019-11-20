@@ -27,7 +27,7 @@ const AppNavigator = createStackNavigator({
       }),
     },
   }, {
-      initialRouteName: PATH.Home
+      initialRouteName: 'Landing'
     });
 
 

@@ -12,6 +12,8 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
 
+
+
 // optional packages - add/remove as appropriate
 import io.invertase.firebase.admob.RNFirebaseAdMobPackage;
 import io.invertase.firebase.analytics.RNFirebaseAnalyticsPackage;
@@ -58,6 +60,8 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
             packages.add(new RNFirebaseNotificationsPackage());
             packages.add(new RNFirebasePerformancePackage());
             packages.add(new RNFirebaseStoragePackage());
+      
+            
             //packages.add(new OrientationPackage());
         return packages;
     }

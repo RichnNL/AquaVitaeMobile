@@ -50,7 +50,7 @@ const AuthenticationStore: IAuthenticationStore =  {
            this.userName = auth.getDisplayName();
            return 1;
        }
-       return 0;
+       return result;
        } catch {
           this.isLoading = false;
           return 0;
@@ -68,7 +68,7 @@ const AuthenticationStore: IAuthenticationStore =  {
             this.userName = auth.getDisplayName();
             return 1;
         }
-        return 0;
+        return result;
         } catch {
             this.isLoading = false;
             this.test = 'Error';

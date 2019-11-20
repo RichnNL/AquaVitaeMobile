@@ -1,7 +1,7 @@
-import User from './User';
-type AppUser = User & {
+import UserType from './User';
+type AppUserType = UserType & {
    email: string;
    friends: string[];
 }
 
-export default AppUser;
+export default AppUserType;

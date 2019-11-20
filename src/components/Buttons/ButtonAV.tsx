@@ -9,22 +9,22 @@ type Props = StyledButtonType & ButtonProps &  {
 }
 
 
-export const  AVButton: React.FC<Props> = (props) => { 
+export const  ButtonAV: React.FC<Props> = (props) => { 
   const text = useLanguageStore();
      return (
        <ButtonContainer
-       type={props.type}
+       variant={props.variant}
        btnSize={props.btnSize}
        onPress={props.onPress}
       >
        <ButtonText 
-       type={props.type}
+       type={props.variant}
        btnSize={props.btnSize}
         > {props.title} </ButtonText>
      </ButtonContainer>)
   }
 
-  AVButton.defaultProps = {
-    type: 'primary',
+  ButtonAV.defaultProps = {
+    variant: 'primary',
     btnSize: 'medium',
   };

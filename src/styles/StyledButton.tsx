@@ -1,15 +1,21 @@
 import * as Theme from './theme/theme';
 import styledComponentsTS from 'styled-components-ts';
 import styledComponents from 'styled-components/native';
-
-
-export type StyledButtonType = Theme.ThemeType &  {
-  type?: 'primary' | 'secondary';
-  btnSize?: 'small' | 'medium' | 'large';
+import VariantType from '../types/style/Variant';
+import ButtonSizeType from '../types/style/ButtonSize';
+import width from '../util/Width';
+export type StyledButtonType = Theme.ThemeType & VariantType & {
+  btnSize?: ButtonSizeType;
 }
 
 export type StyledButtonContainer = StyledButtonType & Theme.ThemeType & {
   onPress:() => void
+}
+
+export type StyledSocialButtonContainer = Theme.ThemeType & {
+  onPress?:() => void,
+  social: 'facebook' | 'google',
+  disabled?: boolean
 }
 
 export const ButtonContainer =styledComponentsTS<StyledButtonContainer>(styledComponents.TouchableOpacity)`
@@ -25,6 +31,23 @@ export const ButtonText = styledComponentsTS<StyledButtonType>(styledComponents.
   fontFamily: ${Theme.headerFont}
   color: ${Theme.textColor};
 	text-align: center;
+`;
+
+export const SocialButtonContainer = styledComponentsTS<StyledSocialButtonContainer>(styledComponents.TouchableOpacity)`
+  height: 60;
+  flexDirection: row;
+  justifyContent: center;
+  alignItems: center;
+  marginBottom: 20;
+  width: ${width(80)};
+  borderRadius: 30;
+  backgroundColor: ${Theme.socialButtonColor};
+`;
+
+export const SocialButtonView = styledComponents.View`
+  flexDirection: row;
+  justifyContent: center;
+  alignItems: center;
 `;
 
 
