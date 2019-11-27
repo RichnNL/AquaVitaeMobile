@@ -1,6 +1,7 @@
 import Firebase from '../../../services/Firebase/Firebase';
 import LocalStorage from '../../../util/LocalStorage';
 import {STORAGEKEY} from '../../../constants/storageKey';
+import ERRORCODE from '../../../constants/errorCode';
 
 
 export type loggedInWithType = 'facebook' | 'google' | false;
@@ -15,7 +16,7 @@ export interface IAuthenticationStore  {
   googleSignIn(): Promise<number>;
   facebookSignIn(): Promise<number>;
   logOut(): Promise<boolean>;
-  loginSilently(): any;
+  loginSilently(): Promise<number>;
   deleteAccount(): Promise<number>;
 }
 
@@ -42,8 +43,7 @@ const AuthenticationStore: IAuthenticationStore =  {
     try {
         this.isLoading = true;
         const result = await auth.googleSignIn();
-        this.isLoading = false;
-        if(result == 1) {
+        if(result === 1) {
            this.loggedIn = 'google';
            LocalStorage.setItem(STORAGEKEY.loginMethodKey, 'google');
            this.picture = auth.getPictureURL();
@@ -52,16 +52,17 @@ const AuthenticationStore: IAuthenticationStore =  {
        }
        return result;
        } catch {
-          this.isLoading = false;
           return 0;
-         }},
+         } 
+         finally {
+          this.isLoading = false;
+         }
+    },
     async facebookSignIn() {
         try {
         this.isLoading = true;
         const result = await auth.facebookSignIn();
-        this.isLoading = false;
-        this.test = String(result);
-        if(result == 1) {
+        if(result === 1) {
             this.loggedIn = 'facebook';
             LocalStorage.setItem(STORAGEKEY.loginMethodKey, 'facebook');
             this.picture = auth.getPictureURL();
@@ -70,12 +71,16 @@ const AuthenticationStore: IAuthenticationStore =  {
         }
         return result;
         } catch {
-            this.isLoading = false;
             this.test = 'Error';
             return 0;
-          }},
+          } 
+          finally {
+            this.isLoading = false;
+          }
+        },
     async logOut() {
         try {
+          this.isLoading = true;
             const result = await auth.logOut();
             if(result) {
                 this.loggedIn = false;
@@ -86,21 +91,37 @@ const AuthenticationStore: IAuthenticationStore =  {
             return false;
         } catch {
             return false
+        } finally {
+          this.isLoading = false;
         }
     },
-    loginSilently() {
-      auth.isLoggedIn().then(async result => {
-      if(result) {
-        let previousLoginMethod  = await LocalStorage.getItem(STORAGEKEY.loginMethodKey);
-        if(previousLoginMethod == 'facebook') {
-          this.loggedIn = 'facebook';
-        } else if(previousLoginMethod == 'google' ) {
-          this.loggedIn = 'google';
+    async loginSilently() {
+      try {
+        this.isLoading = true;
+        const result = await auth.isLoggedIn();
+        if(result) {
+          let previousLoginMethod  = await LocalStorage.getItem(STORAGEKEY.loginMethodKey);
+          if(previousLoginMethod !== null && previousLoginMethod !== false) {
+            if(previousLoginMethod === 'facebook') {
+              this.loggedIn = 'facebook';
+            } else if(previousLoginMethod === 'google' ) {
+              this.loggedIn = 'google';
+            }
+            this.picture = auth.getPictureURL();
+            this.userName = auth.getDisplayName();
+            return 1;
+          } else {
+            return ERRORCODE.authentication.newUser.code;
+          }
+          
+        } else {
+          return 0;
         }
-        this.picture = auth.getPictureURL();
-        this.userName = auth.getDisplayName();
+      } catch {
+          return 0;
+      } finally {
+        this.isLoading = false;
       }
-      });
   },
   async deleteAccount(): Promise<number> {
         const result = await auth.deleteAccount();

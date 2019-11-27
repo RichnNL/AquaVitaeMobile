@@ -34,6 +34,39 @@
 		D69EA2A7CD784C0BA8773EB6 /* OpenSans-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B6303D5CBFC46549561DADA /* OpenSans-Regular.otf */; };
 		7FB33D1A638E412C943DD7BF /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE3D42544B1E41A08974D0EE /* OpenSans-Regular.ttf */; };
 		E75AC31831E749A9AE183102 /* bottle_breath.svg in Resources */ = {isa = PBXBuildFile; fileRef = CEFBE90DEC7A47B890583BB6 /* bottle_breath.svg */; };
+		7AE956C0E7904A6EB5A268F5 /* barrel.png in Resources */ = {isa = PBXBuildFile; fileRef = 153985DF8C6A455F885C82AB /* barrel.png */; };
+		7CC97594018240D9B82F0B8C /* barrel@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB584A67A93644D4A4AA2194 /* barrel@2x.png */; };
+		85D3B7AF8D15403BA7D0CD7A /* barrel@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5CCB4B3A1201448DA45940BA /* barrel@3x.png */; };
+		C82DA6A2E94E4360A9A772EF /* barrel@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8847846E411B4A6EB1CB3346 /* barrel@4x.png */; };
+		54E3E85797A449CD851347CB /* distil.png in Resources */ = {isa = PBXBuildFile; fileRef = E48DDCBBECF2408A86906A77 /* distil.png */; };
+		D0BD7FB1B6E4442690077BC8 /* distil@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C54BADF8927E4E45B754542E /* distil@2x.png */; };
+		861B49C947734E7292757531 /* distil@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B751FE9B85E04644BDB179AC /* distil@3x.png */; };
+		4E53F424A4FB4853907A0CBD /* distil@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E4D80CD6AFE46AA95250F2A /* distil@4x.png */; };
+		1458DDE679474A5093AFD17D /* fbIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 077E06AAEDB548F6BB420D8A /* fbIcon.jpg */; };
+		9AEC4A0B72C84B7BAA2BE7CC /* fermation.png in Resources */ = {isa = PBXBuildFile; fileRef = 55386E3C972A498F8DD37FFD /* fermation.png */; };
+		9AEDAE7CD18B4C4B87146913 /* fermation@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D807BD3FB4F0429BA062E8E4 /* fermation@2x.png */; };
+		14FDB91223A14A6CBD3AFBEF /* fermation@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 53471129916D427FAB8E9E64 /* fermation@3x.png */; };
+		15FDCBFD056E4C90A32E0AB4 /* fermation@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 52818BDF63D944DBAE3D36C8 /* fermation@4x.png */; };
+		8A51321060944F98A0866304 /* glass.png in Resources */ = {isa = PBXBuildFile; fileRef = 27E1623899DC42789D9ED50F /* glass.png */; };
+		0B21D1B48D574C23BB67778B /* glass@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8164826BA05B4552AFA14CDB /* glass@2x.png */; };
+		40ABDEE62559432E87131EC2 /* glass@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EEC9A39588F4577A018E5C3 /* glass@3x.png */; };
+		376E25FA9E0C437AB71E212A /* glass@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = B3089FE23F4A4DACB1A007D6 /* glass@4x.png */; };
+		C4B0E5E76C7E42E3B105BF46 /* googleIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE63C93E34214860BFEFF480 /* googleIcon.jpg */; };
+		ED277CFE68164368857F3B8A /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 64641912D71D4F2DA362E49D /* logo.png */; };
+		149335085CD94F47A7A9A31A /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3454D5F0289A4683951D9AAB /* logo@2x.png */; };
+		3BCFA9F58FA04822817E0504 /* logo@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9752CA34363F4C32B55ECB19 /* logo@3x.png */; };
+		D93F46F831BC4736A2FBEF27 /* logo@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8C52D83991AA48A9AD88568E /* logo@4x.png */; };
+		4791030C9760444BB25D0B13 /* logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3897F2D5EEB747DBAF2D1C3E /* logo2.png */; };
+		6DC93E7883DA4BB883B7D7CC /* Artboard 1.svg in Resources */ = {isa = PBXBuildFile; fileRef = FF05EC1B339A44369C841FAB /* Artboard 1.svg */; };
+		769D6D173B4E46B7B90B4050 /* wheat.png in Resources */ = {isa = PBXBuildFile; fileRef = 27AEF424FAE54DF4B5AF645D /* wheat.png */; };
+		259EFAC6C90D40109457137A /* wheat@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75773C7BF6E1415A9A4E9F71 /* wheat@2x.png */; };
+		C81EB879787B4F6685D762F8 /* wheat@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10CDDDE553CD410EBDA295F1 /* wheat@3x.png */; };
+		CBE8E29E9D2D4750952BB0E5 /* wheat@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = 82404B3FA7674411A431D195 /* wheat@4x.png */; };
+		F6676DF37C7A451F9C8BC666 /* whisky.png in Resources */ = {isa = PBXBuildFile; fileRef = 9D492FF023B747E3B45AF63A /* whisky.png */; };
+		60978472FB024FC0911C1B72 /* whisky@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 201447A811B944EDB3DE6079 /* whisky@2x.png */; };
+		8D4D991BC55448F98ADC0DDE /* whisky@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9007E3DAEB75451883E682C3 /* whisky@3x.png */; };
+		9FD4EC6BCA484207A228864D /* whisky@4x.png in Resources */ = {isa = PBXBuildFile; fileRef = A40575014B9247AD80B4A1D4 /* whisky@4x.png */; };
+		CBFDFBFFE83F4118B89D059D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9FECCC1C479B4C678C6608CF /* Roboto-Medium.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +127,39 @@
 		7B6303D5CBFC46549561DADA /* OpenSans-Regular.otf */ = {isa = PBXFileReference; name = "OpenSans-Regular.otf"; path = "../assets/fonts/OpenSans-Regular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		CE3D42544B1E41A08974D0EE /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; name = "OpenSans-Regular.ttf"; path = "../assets/fonts/OpenSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		CEFBE90DEC7A47B890583BB6 /* bottle_breath.svg */ = {isa = PBXFileReference; name = "bottle_breath.svg"; path = "../assets/img/bottle_breath.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		153985DF8C6A455F885C82AB /* barrel.png */ = {isa = PBXFileReference; name = "barrel.png"; path = "../assets/img/barrel.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CB584A67A93644D4A4AA2194 /* barrel@2x.png */ = {isa = PBXFileReference; name = "barrel@2x.png"; path = "../assets/img/barrel@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		5CCB4B3A1201448DA45940BA /* barrel@3x.png */ = {isa = PBXFileReference; name = "barrel@3x.png"; path = "../assets/img/barrel@3x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8847846E411B4A6EB1CB3346 /* barrel@4x.png */ = {isa = PBXFileReference; name = "barrel@4x.png"; path = "../assets/img/barrel@4x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		E48DDCBBECF2408A86906A77 /* distil.png */ = {isa = PBXFileReference; name = "distil.png"; path = "../assets/img/distil.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C54BADF8927E4E45B754542E /* distil@2x.png */ = {isa = PBXFileReference; name = "distil@2x.png"; path = "../assets/img/distil@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B751FE9B85E04644BDB179AC /* distil@3x.png */ = {isa = PBXFileReference; name = "distil@3x.png"; path = "../assets/img/distil@3x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4E4D80CD6AFE46AA95250F2A /* distil@4x.png */ = {isa = PBXFileReference; name = "distil@4x.png"; path = "../assets/img/distil@4x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		077E06AAEDB548F6BB420D8A /* fbIcon.jpg */ = {isa = PBXFileReference; name = "fbIcon.jpg"; path = "../assets/img/fbIcon.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		55386E3C972A498F8DD37FFD /* fermation.png */ = {isa = PBXFileReference; name = "fermation.png"; path = "../assets/img/fermation.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D807BD3FB4F0429BA062E8E4 /* fermation@2x.png */ = {isa = PBXFileReference; name = "fermation@2x.png"; path = "../assets/img/fermation@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		53471129916D427FAB8E9E64 /* fermation@3x.png */ = {isa = PBXFileReference; name = "fermation@3x.png"; path = "../assets/img/fermation@3x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		52818BDF63D944DBAE3D36C8 /* fermation@4x.png */ = {isa = PBXFileReference; name = "fermation@4x.png"; path = "../assets/img/fermation@4x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		27E1623899DC42789D9ED50F /* glass.png */ = {isa = PBXFileReference; name = "glass.png"; path = "../assets/img/glass.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8164826BA05B4552AFA14CDB /* glass@2x.png */ = {isa = PBXFileReference; name = "glass@2x.png"; path = "../assets/img/glass@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9EEC9A39588F4577A018E5C3 /* glass@3x.png */ = {isa = PBXFileReference; name = "glass@3x.png"; path = "../assets/img/glass@3x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B3089FE23F4A4DACB1A007D6 /* glass@4x.png */ = {isa = PBXFileReference; name = "glass@4x.png"; path = "../assets/img/glass@4x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CE63C93E34214860BFEFF480 /* googleIcon.jpg */ = {isa = PBXFileReference; name = "googleIcon.jpg"; path = "../assets/img/googleIcon.jpg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		64641912D71D4F2DA362E49D /* logo.png */ = {isa = PBXFileReference; name = "logo.png"; path = "../assets/img/logo.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3454D5F0289A4683951D9AAB /* logo@2x.png */ = {isa = PBXFileReference; name = "logo@2x.png"; path = "../assets/img/logo@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9752CA34363F4C32B55ECB19 /* logo@3x.png */ = {isa = PBXFileReference; name = "logo@3x.png"; path = "../assets/img/logo@3x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8C52D83991AA48A9AD88568E /* logo@4x.png */ = {isa = PBXFileReference; name = "logo@4x.png"; path = "../assets/img/logo@4x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3897F2D5EEB747DBAF2D1C3E /* logo2.png */ = {isa = PBXFileReference; name = "logo2.png"; path = "../assets/img/logo2.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF05EC1B339A44369C841FAB /* Artboard 1.svg */ = {isa = PBXFileReference; name = "Artboard 1.svg"; path = "../assets/img/SVG/Artboard 1.svg"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		27AEF424FAE54DF4B5AF645D /* wheat.png */ = {isa = PBXFileReference; name = "wheat.png"; path = "../assets/img/wheat.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		75773C7BF6E1415A9A4E9F71 /* wheat@2x.png */ = {isa = PBXFileReference; name = "wheat@2x.png"; path = "../assets/img/wheat@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		10CDDDE553CD410EBDA295F1 /* wheat@3x.png */ = {isa = PBXFileReference; name = "wheat@3x.png"; path = "../assets/img/wheat@3x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		82404B3FA7674411A431D195 /* wheat@4x.png */ = {isa = PBXFileReference; name = "wheat@4x.png"; path = "../assets/img/wheat@4x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9D492FF023B747E3B45AF63A /* whisky.png */ = {isa = PBXFileReference; name = "whisky.png"; path = "../assets/img/whisky.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		201447A811B944EDB3DE6079 /* whisky@2x.png */ = {isa = PBXFileReference; name = "whisky@2x.png"; path = "../assets/img/whisky@2x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9007E3DAEB75451883E682C3 /* whisky@3x.png */ = {isa = PBXFileReference; name = "whisky@3x.png"; path = "../assets/img/whisky@3x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A40575014B9247AD80B4A1D4 /* whisky@4x.png */ = {isa = PBXFileReference; name = "whisky@4x.png"; path = "../assets/img/whisky@4x.png"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		9FECCC1C479B4C678C6608CF /* Roboto-Medium.ttf */ = {isa = PBXFileReference; name = "Roboto-Medium.ttf"; path = "../assets/fonts/Roboto-Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,6 +318,39 @@
 				7B6303D5CBFC46549561DADA /* OpenSans-Regular.otf */,
 				CE3D42544B1E41A08974D0EE /* OpenSans-Regular.ttf */,
 				CEFBE90DEC7A47B890583BB6 /* bottle_breath.svg */,
+				153985DF8C6A455F885C82AB /* barrel.png */,
+				CB584A67A93644D4A4AA2194 /* barrel@2x.png */,
+				5CCB4B3A1201448DA45940BA /* barrel@3x.png */,
+				8847846E411B4A6EB1CB3346 /* barrel@4x.png */,
+				E48DDCBBECF2408A86906A77 /* distil.png */,
+				C54BADF8927E4E45B754542E /* distil@2x.png */,
+				B751FE9B85E04644BDB179AC /* distil@3x.png */,
+				4E4D80CD6AFE46AA95250F2A /* distil@4x.png */,
+				077E06AAEDB548F6BB420D8A /* fbIcon.jpg */,
+				55386E3C972A498F8DD37FFD /* fermation.png */,
+				D807BD3FB4F0429BA062E8E4 /* fermation@2x.png */,
+				53471129916D427FAB8E9E64 /* fermation@3x.png */,
+				52818BDF63D944DBAE3D36C8 /* fermation@4x.png */,
+				27E1623899DC42789D9ED50F /* glass.png */,
+				8164826BA05B4552AFA14CDB /* glass@2x.png */,
+				9EEC9A39588F4577A018E5C3 /* glass@3x.png */,
+				B3089FE23F4A4DACB1A007D6 /* glass@4x.png */,
+				CE63C93E34214860BFEFF480 /* googleIcon.jpg */,
+				64641912D71D4F2DA362E49D /* logo.png */,
+				3454D5F0289A4683951D9AAB /* logo@2x.png */,
+				9752CA34363F4C32B55ECB19 /* logo@3x.png */,
+				8C52D83991AA48A9AD88568E /* logo@4x.png */,
+				3897F2D5EEB747DBAF2D1C3E /* logo2.png */,
+				FF05EC1B339A44369C841FAB /* Artboard 1.svg */,
+				27AEF424FAE54DF4B5AF645D /* wheat.png */,
+				75773C7BF6E1415A9A4E9F71 /* wheat@2x.png */,
+				10CDDDE553CD410EBDA295F1 /* wheat@3x.png */,
+				82404B3FA7674411A431D195 /* wheat@4x.png */,
+				9D492FF023B747E3B45AF63A /* whisky.png */,
+				201447A811B944EDB3DE6079 /* whisky@2x.png */,
+				9007E3DAEB75451883E682C3 /* whisky@3x.png */,
+				A40575014B9247AD80B4A1D4 /* whisky@4x.png */,
+				9FECCC1C479B4C678C6608CF /* Roboto-Medium.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -410,6 +509,39 @@
 				D69EA2A7CD784C0BA8773EB6 /* OpenSans-Regular.otf in Resources */,
 				7FB33D1A638E412C943DD7BF /* OpenSans-Regular.ttf in Resources */,
 				E75AC31831E749A9AE183102 /* bottle_breath.svg in Resources */,
+				7AE956C0E7904A6EB5A268F5 /* barrel.png in Resources */,
+				7CC97594018240D9B82F0B8C /* barrel@2x.png in Resources */,
+				85D3B7AF8D15403BA7D0CD7A /* barrel@3x.png in Resources */,
+				C82DA6A2E94E4360A9A772EF /* barrel@4x.png in Resources */,
+				54E3E85797A449CD851347CB /* distil.png in Resources */,
+				D0BD7FB1B6E4442690077BC8 /* distil@2x.png in Resources */,
+				861B49C947734E7292757531 /* distil@3x.png in Resources */,
+				4E53F424A4FB4853907A0CBD /* distil@4x.png in Resources */,
+				1458DDE679474A5093AFD17D /* fbIcon.jpg in Resources */,
+				9AEC4A0B72C84B7BAA2BE7CC /* fermation.png in Resources */,
+				9AEDAE7CD18B4C4B87146913 /* fermation@2x.png in Resources */,
+				14FDB91223A14A6CBD3AFBEF /* fermation@3x.png in Resources */,
+				15FDCBFD056E4C90A32E0AB4 /* fermation@4x.png in Resources */,
+				8A51321060944F98A0866304 /* glass.png in Resources */,
+				0B21D1B48D574C23BB67778B /* glass@2x.png in Resources */,
+				40ABDEE62559432E87131EC2 /* glass@3x.png in Resources */,
+				376E25FA9E0C437AB71E212A /* glass@4x.png in Resources */,
+				C4B0E5E76C7E42E3B105BF46 /* googleIcon.jpg in Resources */,
+				ED277CFE68164368857F3B8A /* logo.png in Resources */,
+				149335085CD94F47A7A9A31A /* logo@2x.png in Resources */,
+				3BCFA9F58FA04822817E0504 /* logo@3x.png in Resources */,
+				D93F46F831BC4736A2FBEF27 /* logo@4x.png in Resources */,
+				4791030C9760444BB25D0B13 /* logo2.png in Resources */,
+				6DC93E7883DA4BB883B7D7CC /* Artboard 1.svg in Resources */,
+				769D6D173B4E46B7B90B4050 /* wheat.png in Resources */,
+				259EFAC6C90D40109457137A /* wheat@2x.png in Resources */,
+				C81EB879787B4F6685D762F8 /* wheat@3x.png in Resources */,
+				CBE8E29E9D2D4750952BB0E5 /* wheat@4x.png in Resources */,
+				F6676DF37C7A451F9C8BC666 /* whisky.png in Resources */,
+				60978472FB024FC0911C1B72 /* whisky@2x.png in Resources */,
+				8D4D991BC55448F98ADC0DDE /* whisky@3x.png in Resources */,
+				9FD4EC6BCA484207A228864D /* whisky@4x.png in Resources */,
+				CBFDFBFFE83F4118B89D059D /* Roboto-Medium.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import  createStatusStore  from '../stores/Status/StatusStore';
 import StatusContext from '../context/StatusContext';
-import OrientationLoadingOverlay from 'react-native-orientation-loading-overlay';
-import { View, Image } from 'react-native';
+import Modal from "react-native-modal";
+import { View , Text} from 'react-native';
 import { useAuthenticationStore } from '../stores/Authentication';
 import useDatabaseStore from '../hooks/DatabaseHook';
+import Loading from '../../components/Images/Loading';
+import { StyledCenterView } from '../../styles/components/StyledView';
+import { useObserver } from 'mobx-react';
+import {observable} from 'mobx';
 
 
 export interface IStatusProvider {
@@ -13,31 +17,39 @@ export interface IStatusProvider {
 
 export const StatusProvider: React.FC<IStatusProvider> = ({children}) => { 
     const [StatusStore, setStatusStore] =  useState(createStatusStore);
-    const authenticationLoading = useAuthenticationStore().isLoading;
-    const dataLoading = useDatabaseStore().isLoading;
+    const authStore = useAuthenticationStore();
+    const dataStore = useDatabaseStore();
     useEffect(()=> {
-        if(authenticationLoading || dataLoading) {
+        if(authStore.isLoading|| dataStore.isLoading) {
             setStatusStore({loading: true})
         } else {
             setStatusStore({loading: false})
         }
-  }, [authenticationLoading, dataLoading]);
+  }, [authStore.isLoading,  dataStore.isLoading]);
 
-  return  (
-    <StatusContext.Provider value={StatusStore}>
-        <OrientationLoadingOverlay
-          visible={StatusStore.loading}
-          >
-          <View>
-            <Image
-              source={require('../../../assets/img/bottle_breath.svg')}
-              />
-          </View>
-        </OrientationLoadingOverlay>
-          {children}
-    </StatusContext.Provider>
-  
-  )
+  return useObserver(() => {
+    return  <StatusContext.Provider value={StatusStore}>
+      {authStore.isLoading || dataStore.isLoading || StatusStore.loading ? (
+        <Modal
+          isVisible={StatusStore.loading}
+          backdropColor="#FFFFFF"
+          animationIn="zoomIn"
+          animationInTiming={50}
+          animationOutTiming={600}
+          animationOut="zoomOut"
+          backdropOpacity={0.0}
+        >
+        <StyledCenterView>
+          <Loading/>
+        </StyledCenterView>
+      </Modal>
+       
+      ) : (
+        null
+      )}
+    {children}
+  </StatusContext.Provider>
+ });
 }
 
 export default StatusProvider;

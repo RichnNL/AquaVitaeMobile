@@ -1,4 +1,3 @@
-import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from '../screens/Home/HomeScreen';
 import LandingScreen from '../screens/Landing/LandingScreen';
@@ -7,28 +6,14 @@ import PATH from '../constants/pathData';
 const AppNavigator = createStackNavigator({
     Home: {
       screen: HomeScreen,
-      path: PATH.Home,
-      navigationOptions: ({ navigation }) => ({
-        headerShown: false,
-      }),
-    },
-    Landing: {
-      screen: LandingScreen,
-      path: PATH.Landing,
-      navigationOptions: ({ navigation }) => ({
-        headerShown: false,
-      }),
-    },
-    Register: {
-      screen: RegisterScreen,
-      path: PATH.Register,
+      path: PATH.Screens.LoggedIn.Home,
       navigationOptions: ({ navigation }) => ({
         headerShown: false,
       }),
     },
   }, {
-      initialRouteName: 'Landing'
+      initialRouteName: 'Home'
     });
 
 
-export default createAppContainer(AppNavigator);
+export default AppNavigator;

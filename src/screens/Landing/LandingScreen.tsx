@@ -1,7 +1,7 @@
 import React from 'react';
 import BackgroundView from '../../components/Views/BackgroundView';
-import FadeInLogo from '../../components/Labels/FadinLogo';
-import { CenterView } from '../../styles/StyledView';
+import Logo from '../../components/Labels/Logo';
+import { StyledCenterView } from '../../styles/components/StyledView';
 import SocialButton from '../../components/Buttons/SocialButton';
 import Terms from '../../components/Labels/Terms';
 type Props =  {
@@ -12,22 +12,21 @@ type Props =  {
 
 const  LandingScreen: React.FC<Props> = (props) => { 
      return <BackgroundView>
+              <StyledCenterView flex={4} >
+                <Logo/>
+              </StyledCenterView>
               
-              <CenterView flex={4} >
-                <FadeInLogo/>
-              </CenterView>
-              
-              <CenterView >
+              <StyledCenterView >
                 <SocialButton navigation={props.navigation} social='google' />
-              </CenterView>
+              </StyledCenterView>
               
-              <CenterView>
+              <StyledCenterView>
                 <SocialButton navigation={props.navigation} social='facebook' />
-              </CenterView>
+              </StyledCenterView>
 
-              <CenterView>
+              <StyledCenterView>
                 <Terms/>
-              </CenterView>
+              </StyledCenterView>
             </BackgroundView>
   }
 

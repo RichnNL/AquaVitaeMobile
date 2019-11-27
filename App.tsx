@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import AppContainer from './src/navigation/AppStackNavigation';
+import AppContainer from './src/navigation/RootSwitchNavigation';
 import { useScreens } from "react-native-screens";
 import {ThemeProvider} from './src/state/stores/Theme/index';
 import {LanguageProvider} from './src/state/stores/Language/index';

@@ -55,18 +55,18 @@ export const textFont = theme.variants('theme', 'variant', {
 });
 
 export const textItalicFont = theme.variants('theme', 'variant', {
-  primary: {light: 'OpenSans_Italic', dark: 'OpenSans_Italic' },
-  secondary: {light: 'OpenSans_Italic', dark: 'OpenSans_Italic' }
+  primary: {light: 'OpenSans-Italic', dark: 'OpenSans-Italic' },
+  secondary: {light: 'OpenSans-Italic', dark: 'OpenSans-Italic' }
 });
 
 export const textBoldFont = theme.variants('theme', 'variant', {
-  primary: {light: 'OpenSans_Bold', dark: 'OpenSans_Bold' },
-  secondary: {light: 'OpenSans_Bold', dark: 'OpenSans_Bold' }
+  primary: {light: 'OpenSans-Bold', dark: 'OpenSans-Bold' },
+  secondary: {light: 'OpenSans-Bold', dark: 'OpenSans-Bold' }
 });
 
 export const textLightFont = theme.variants('theme', 'variant', {
-  primary: {light: 'OpenSans_Light', dark: 'OpenSans_Light' },
-  secondary: {light: 'OpenSans_Light', dark: 'OpenSans_Light' }
+  primary: {light: 'OpenSans-Light', dark: 'OpenSans-Light' },
+  secondary: {light: 'OpenSans-Light', dark: 'OpenSans-Light' }
 });
 
 export const buttonFontSize = theme.variants('layout', 'btnSize', {
@@ -76,8 +76,18 @@ export const buttonFontSize = theme.variants('layout', 'btnSize', {
 });
 
 export const socialButtonColor = theme.variants('theme', 'social', {
-  google: {light: '#ff0000', dark: '#ff0000' },
-  facebook: {light: '#3b5998', dark: '#3b5998' }
+  google: {light: Colors.google.light, dark: Colors.google.dark },
+  facebook: {light: Colors.facebook.default, dark: Colors.facebook.default }
+});
+
+export const socialButtonTextColor = theme.variants('theme', 'social', {
+  google: {light: Colors.text.default, dark: Colors.google.light },
+  facebook: {light: Colors.facebook.light, dark: Colors.facebook.light }
+});
+
+export const socialFontFamily = theme.variants('theme', 'social', {
+  google: {light: 'Roboto-Medium', dark: 'Roboto-Medium' },
+  facebook: {light: 'OpenSans', dark: 'OpenSans' }
 });
 
 

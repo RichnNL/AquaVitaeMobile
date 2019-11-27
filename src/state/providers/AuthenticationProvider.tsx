@@ -10,7 +10,6 @@ export interface IAuthenticationProvider {
 
 export const AuthenticationProvider: React.FC<IAuthenticationProvider> = ({children}) => { 
   const authenticationStore = useLocalStore(createAuthenticationStore);
-  authenticationStore.loginSilently();
   return  (
     <AuthenticationContext.Provider value={authenticationStore}>
           {children}

@@ -79,9 +79,6 @@ import RULES from '../../constants/rules';
                    } catch {
                     return ERRORCODE.database.read.code;
                    }
-                    
-
-                    
                 }
               } catch (e) {
                 return ERRORCODE.authentication.loginFailed.code;
@@ -92,7 +89,6 @@ import RULES from '../../constants/rules';
       
                 firebase.auth().onAuthStateChanged(( user => {
                     if(user) {
-                        console.log(user!.uid);
                         resolve(true)
                     } else {
                         resolve(false);

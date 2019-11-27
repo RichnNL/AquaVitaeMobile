@@ -1,7 +1,8 @@
-import React, { useState, Fragment, useEffect } from 'react';
-import {StyledViewType} from '../../styles/StyledView';
-import { Animated, Dimensions } from 'react-native';
+import React from 'react';
+import {StyledViewType} from '../../styles/components/StyledView';
+import { Animated,  } from 'react-native';
 import {PATH} from '../../constants/pathData';
+import { percentWidth } from '../../util/Measurements';
 
 type Props  = StyledViewType & {
    
@@ -9,7 +10,7 @@ type Props  = StyledViewType & {
 
 
 const  FadeInLogo: React.FC<Props> = (props) => { 
-    const size = Dimensions.get('window').width - (Dimensions.get('window').width * .10);
+    const size =  percentWidth(80);
     const opacity = new Animated.Value(0);
     const interpolate = opacity.interpolate({
         inputRange: [0, 1],

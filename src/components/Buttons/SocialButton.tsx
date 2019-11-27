@@ -3,16 +3,18 @@ import {useAuthenticationStore} from '../../state/stores/Authentication/index';
 import PATH from '../../constants/pathData';
 import ERRORCODE from '../../constants/errorCode';
 import {Image, Text } from 'react-native';
-import { StyledSocialButtonContainer, SocialButtonContainer, SocialButtonView } from '../../styles/StyledButton';
-
-type Props = StyledSocialButtonContainer &  {
+import { StyledSocialButtonContainerType, StyledSocialButtonContainer} from '../../styles/components/StyledButton';
+import {StyledSocialButtonView} from '../../styles/components/StyledView';
+import {StyledSocialText} from '../../styles/components/StyledText';
+import { NavigationActions } from 'react-navigation';
+type Props = StyledSocialButtonContainerType &  {
     navigation?: any;
 }
 
 
 const  SocialButton: React.FC<Props> = (props) => { 
   const [buttonDisabled, setButtonDisabled] = useState(false);
-  const source = props.social === 'facebook' ? PATH.FacebookIcon :PATH.GoogleIcon;
+  const source = props.social === 'facebook' ? PATH.Icons.FacebookIcon : PATH.Icons.GoogleIcon;
   const text = props.social === 'facebook' ? 'Continue with facebook' : 'Continue with google';
   const authentication = useAuthenticationStore();
   const signIn = async() => { 
@@ -26,20 +28,19 @@ const  SocialButton: React.FC<Props> = (props) => {
     
     setButtonDisabled(false);
         if(result === 1) {
-            props.navigation.navigate(PATH.Landing);
+            props.navigation.navigate(PATH.Screens.LoggedIn.default, {}, NavigationActions.navigate({ routeName: PATH.Screens.LoggedIn.Home }));
         } else if(result === ERRORCODE.authentication.newUser.code) {
-          props.navigation.navigate(PATH.Register);
+          props.navigation.navigate(PATH.Screens.LoggedOut.Register);
         }
     }
   return (
    
-    <SocialButtonContainer social={props.social} disabled={buttonDisabled} onPress={signIn} >
-      <SocialButtonView>
-        <Image style={{width:30, height:30, marginRight: 30}} source={source} />
-        <Text style={{color: 'white'}}>{text}</Text>
-        <Text style={{color: 'white'}}>{authentication.test}</Text>
-      </SocialButtonView>
-    </SocialButtonContainer>
+    <StyledSocialButtonContainer social={props.social} disabled={buttonDisabled} onPress={signIn} >
+      <StyledSocialButtonView>
+        <Image style={{width:40, height:40, marginRight: 24}} source={source} />
+        <StyledSocialText social={props.social}> {text} </StyledSocialText>
+      </StyledSocialButtonView>
+    </StyledSocialButtonContainer>
     )
   }
 

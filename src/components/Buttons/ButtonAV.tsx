@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyledButtonType, ButtonContainer, ButtonText} from '../../styles/StyledButton';
+import {StyledButtonType, ButtonContainer, ButtonText} from '../../styles/components/StyledButton';
 import {useLanguageStore} from '../../state/stores/Language/index';
 import {ButtonProps} from 'react-native';
 

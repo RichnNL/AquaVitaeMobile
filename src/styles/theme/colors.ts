@@ -5,6 +5,14 @@ export interface IColorsInterface {
     
 }
 
+export interface ICountries {
+    scotland: string;
+    ireland: string;
+    america: string;
+    japan: string;
+    canada: string;
+}
+
 export interface IColorOptionsInterface {
     primary: IColorsInterface;
     secondary: IColorsInterface;
@@ -12,6 +20,9 @@ export interface IColorOptionsInterface {
     accent: IColorsInterface;
     light: IColorsInterface;
     dark: IColorsInterface;
+    google: IColorsInterface;
+    facebook: IColorsInterface;
+    countries: ICountries;
 }
 
 export const Colors: IColorOptionsInterface =  {
@@ -44,6 +55,23 @@ export const Colors: IColorOptionsInterface =  {
         default: '#95989b',
         light: '#bcbec0',
         dark: '#767a7d'
+    },
+    google: {
+        default: '#FFFFFF',
+        light: '#FFFFFF',
+        dark: '#4285F4'
+    },
+    facebook: {
+        default: '#3b5998',
+        light: '#f7f7f7',
+        dark: '#8b9dc3'
+    },
+    countries: {
+        scotland: '#0065BF',
+        ireland: '#169b62',
+        america: '#3c3b6e',
+        japan: '#bc002d',
+        canada: ' #ff0000',
     }
 };
 
