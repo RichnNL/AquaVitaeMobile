@@ -1,11 +1,7 @@
-import React, { useDebugValue, useState, useEffect, Fragment } from 'react';
-import {StyledButtonType, ButtonContainer, ButtonText} from '../../styles/components/StyledButton';
-import {useLanguageStore} from '../../state/stores/Language/index';
-import {ButtonProps,Text} from 'react-native';
+import React, { useState, Fragment } from 'react';
 import Animated, { Easing} from 'react-native-reanimated';
 import {percentWidth} from '../../util/Measurements';
 import PATH from '../../constants/pathData';
-import { useAuthenticationStore } from '../../state/stores/Authentication';
 import { useObserver } from 'mobx-react';
 import useInterval from '../../util/Hooks/useInterval';
 type Props = {

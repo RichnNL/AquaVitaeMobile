@@ -100,6 +100,8 @@ const AuthenticationStore: IAuthenticationStore =  {
         this.isLoading = true;
         const result = await auth.isLoggedIn();
         if(result) {
+          this.picture = auth.getPictureURL();
+          this.userName = auth.getDisplayName();
           let previousLoginMethod  = await LocalStorage.getItem(STORAGEKEY.loginMethodKey);
           if(previousLoginMethod !== null && previousLoginMethod !== false) {
             if(previousLoginMethod === 'facebook') {
@@ -107,8 +109,6 @@ const AuthenticationStore: IAuthenticationStore =  {
             } else if(previousLoginMethod === 'google' ) {
               this.loggedIn = 'google';
             }
-            this.picture = auth.getPictureURL();
-            this.userName = auth.getDisplayName();
             return 1;
           } else {
             return ERRORCODE.authentication.newUser.code;

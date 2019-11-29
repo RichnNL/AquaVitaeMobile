@@ -1,7 +1,7 @@
 import React from 'react';
 import  createLanguageStore  from '../stores/Language/LanguageStore';
 import LanguageContext from '../context/LanguageContext';
-import { useLocalStore} from "mobx-react";
+import { useLocalStore} from 'mobx-react';
 
 
 

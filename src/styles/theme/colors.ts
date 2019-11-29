@@ -42,9 +42,9 @@ export const Colors: IColorOptionsInterface =  {
         dark: '#11181e'
     },
     accent: { 
-        default: '#554bc6',
-        light: '#867fd6',
-        dark: '#3e35a6'
+        default: '#507d4a',
+        light: '#008080',
+        dark: '#9f1d35'
     },
     light: {
         default: '#e9edf6',

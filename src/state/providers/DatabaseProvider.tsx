@@ -1,7 +1,7 @@
 import React from 'react';
 import  createDatabaseStore  from '../stores/Database/DatabaseStore';
 import DatabaseContext from '../context/DatabaseContext';
-import { useLocalStore} from "mobx-react";
+import { useLocalStore} from 'mobx-react';
 
 
 

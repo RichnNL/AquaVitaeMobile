@@ -1,13 +1,9 @@
-import React, { useState, Fragment } from 'react';
-import {useAuthenticationStore} from '../../state/stores/Authentication/index';
-import {useThemeStore} from '../../state/stores/Theme/index';
-import { GoogleSigninButton } from '@react-native-community/google-signin';
+import React, {Fragment } from 'react';
 import PATH from '../../constants/pathData';
 import {Container} from '../../styles/components/StyledView';
 import StyledStatusBar from '../../styles/components/StyledStatusBar';
 import VariantType from '../../types/style/Variant';
-import {Text} from 'react-native';
-import {StyledBackground, StyledImageBackground} from '../../styles/components/StyledBackground';
+import {StyledImageBackground} from '../../styles/components/StyledBackground';
 type Props  = VariantType & {
   gradient?: boolean
 }

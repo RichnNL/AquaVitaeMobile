@@ -1,6 +1,4 @@
-import Firebase from '../../../services/Firebase/Firebase';
-import LocalStorage from '../../../util/LocalStorage';
-import {STORAGEKEY} from '../../../constants/storageKey';
+
 import UserType from '../../../types/Users/User';
 
 

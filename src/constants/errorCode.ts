@@ -26,6 +26,26 @@ const ERRORCODE = {
           code: -20,
           message: 'Provide a longer screen name'
        },
+       screenNameLength: {
+          code: -21,
+          message: 'Screen name length error'
+       },
+       screenNameBeginSytax: {
+         code: -22,
+          message: 'Screen name must begin with letters'
+       },
+       mottoLength: {
+         code: -23,
+         message: 'Motto too long'
+      },
+      mottoHasSpecialChars: {
+         code: -24,
+         message: 'Motto contains special characters'
+      },
+      screenNameContainsSpeicalChars: {
+         code: -25,
+         message: 'Screen name contains special characters'
+      }
     },
     database: {
        write: {

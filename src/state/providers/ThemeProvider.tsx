@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import createThemeStore from '../stores/Theme/ThemeStore';
-import { useObserver } from 'mobx-react';
 import { ThemeProvider } from 'styled-components';
 import ThemeContext from '../context/ThemeContext';
-import { useLocalStore} from "mobx-react";
+import { useLocalStore, useObserver } from 'mobx-react';
 import Orientation from  'react-native-orientation-locker';
 export interface IThemeProvider {
   children?: React.ReactNode | any; 

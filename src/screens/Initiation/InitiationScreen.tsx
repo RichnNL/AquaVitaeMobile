@@ -31,19 +31,29 @@ const  InitiationScreen: React.FC<Props> = (props) => {
 
   const region = Math.floor(Math.random() * regions.length);
   const source: any = regions[region];
+
   useEffect(()=> {
     themeStore.lockPortrait(true);
+    let timeOut;
     authStore.loginSilently().then(loggedIn => {
-      if(loggedIn === 1) {
-        props.navigation.navigate(PATH.Screens.LoggedIn.default);
-      } else if(loggedIn === ERRORCODE.authentication.newUser.code) {
-        props.navigation.navigate(PATH.Screens.LoggedOut.default, {}, NavigationActions.navigate({ routeName: PATH.Screens.LoggedOut.Register }));
-      } else {
-        props.navigation.navigate(PATH.Screens.LoggedOut.default);
-      }
+      timeOut = setTimeout(()=> {
+        if(loggedIn === 1) {
+          props.navigation.navigate(PATH.Screens.LoggedIn.default);
+        } else if(loggedIn === ERRORCODE.authentication.newUser.code) {
+          props.navigation.navigate(PATH.Screens.LoggedOut.default, {}, NavigationActions.navigate({ routeName: PATH.Screens.LoggedOut.Register }));
+        } else {
+          props.navigation.navigate(PATH.Screens.LoggedOut.default);
+        }
+      }, 1500);
+     
     }).catch(error => {
-      props.navigation.navigate(PATH.Screens.LoggedOut.default);
+      timeOut = setTimeout(()=> {
+        props.navigation.navigate(PATH.Screens.LoggedOut.default);
+      }, 1500);
     })
+    return ()=> {
+      clearTimeout(timeOut);
+    }
   }, []);
 
   return useObserver(() => {

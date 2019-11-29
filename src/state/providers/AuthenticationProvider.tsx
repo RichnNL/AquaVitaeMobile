@@ -1,7 +1,6 @@
 import React from 'react';
-import  AuthenticationStore  from '../stores/Authentication/AuthenticationStore';
 import AuthenticationContext from '../context/AuthenticationContext';
-import { useLocalStore} from "mobx-react";
+import { useLocalStore} from 'mobx-react';
 import createAuthenticationStore from '../stores/Authentication/AuthenticationStore';
 
 export interface IAuthenticationProvider {

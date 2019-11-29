@@ -43,8 +43,21 @@ export const StyledHeaderText = styledComponentsTS<StyledTextType>(styledCompone
     margin-bottom: 10;
     margin-left: 0;
 `;
+export const StyledSubHeaderText = styledComponentsTS<StyledTextType>(styledComponents.Text)`
+    font-size: ${normalizeText(20)};
+    fontFamily: ${Theme.headerFont}
+    color: ${Colors.text.light};
+    text-align: right;
+    align-self: flex-end;
+    margin-bottom: 10;
+    margin-left: 0;
+    margin-right: 15;
+`;
 
 StyledHeaderText.defaultProps = {
+    variant: 'primary',
+};
+StyledSubHeaderText.defaultProps = {
     variant: 'primary',
 };
 

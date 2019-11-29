@@ -1,14 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import  createStatusStore  from '../stores/Status/StatusStore';
 import StatusContext from '../context/StatusContext';
-import Modal from "react-native-modal";
-import { View , Text} from 'react-native';
+import Modal from 'react-native-modal';
 import { useAuthenticationStore } from '../stores/Authentication';
 import useDatabaseStore from '../hooks/DatabaseHook';
 import Loading from '../../components/Images/Loading';
 import { StyledCenterView } from '../../styles/components/StyledView';
 import { useObserver } from 'mobx-react';
-import {observable} from 'mobx';
 
 
 export interface IStatusProvider {
