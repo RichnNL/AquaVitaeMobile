@@ -1,11 +1,14 @@
 
 import UserType from '../../../types/Users/User';
+import Firebase from '../../../services/Firebase/Firebase';
+import RULES from '../../../constants/rules';
 
-
+const database: IDatabase = Firebase;
 
 
 export interface IDatabaseStore  {
- isLoading: boolean;
+  isLoading: boolean;
+  userNameTaken(screenName: string): Promise<boolean>;
 }
 
 export interface IDatabase  {
@@ -18,6 +21,21 @@ export interface IDatabase  {
 
 const DatabaseStore: IDatabaseStore =  {
   isLoading: false,
+  async userNameTaken(screenName: string) {
+    try {
+      const names = await database.searchScreenName(screenName, 1);
+      if(names && names.length === 0) {
+        return false;
+      } else {
+
+        return true;
+      }
+
+    } catch {
+        return true;
+    }
+    
+  }
 }
 
 const createDatabaseStore = () => {

@@ -104,9 +104,12 @@ Support this project by becoming a sponsor. Your logo will show up here with a l
 Delete Node_modules 
 npm install
 
+./gradlew clean
+
 Reset MetroBundler Cache
 rm -fr $TMPDIR/metro*
 npm run start --reset-cache
+npm run android
 
 Remove Haste Cache
 rm -fr/$TMPDIR/haste-map-react-native-packager-*

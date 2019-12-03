@@ -5,7 +5,7 @@ import Modal from 'react-native-modal';
 import { useAuthenticationStore } from '../stores/Authentication';
 import useDatabaseStore from '../hooks/DatabaseHook';
 import Loading from '../../components/Images/Loading';
-import { StyledCenterView } from '../../styles/components/StyledView';
+import { StyledColCenterView } from '../../styles/components/StyledView';
 import { useObserver } from 'mobx-react';
 
 
@@ -37,9 +37,9 @@ export const StatusProvider: React.FC<IStatusProvider> = ({children}) => {
           animationOut="zoomOut"
           backdropOpacity={0.0}
         >
-        <StyledCenterView>
+        <StyledColCenterView>
           <Loading/>
-        </StyledCenterView>
+        </StyledColCenterView>
       </Modal>
        
       ) : (

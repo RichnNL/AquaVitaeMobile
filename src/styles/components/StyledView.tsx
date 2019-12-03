@@ -15,6 +15,8 @@ export type CenterViewType = {
   flex?: number
 }
 
+
+
 export const Container = styledComponentsTS<StyledViewType>(styledComponents.View)`
     flex: 1;
     flexDirection: column;
@@ -23,7 +25,7 @@ export const Container = styledComponentsTS<StyledViewType>(styledComponents.Vie
 	  background-color:  ${Theme.backgroundColor};
 `;
 
-export const StyledCenterView = styledComponentsTS<CenterViewType>(styledComponents.View)`
+export const StyledColCenterView = styledComponentsTS<CenterViewType>(styledComponents.View)`
       flex: ${props => props.flex || 1};
       alignItems: center;
       flexDirection: column; 
@@ -37,11 +39,21 @@ export const StyledSocialButtonView = styledComponents.View`
   alignItems: center;
 `;
 
-export const StyledRowView = styledComponents.View`
+export const StyledRowCenterView = styledComponents.View`
   flexDirection: row;
   justifyContent: center;
   alignItems: center;
+  margin-right: 15;
+  margin-left: 15;
 `;
-
+export const StyledRowSpaceBetweenView = styledComponents.View`
+  flexDirection: row;
+  justifyContent: space-between;
+  alignItems: center;
+  margin-right: 65;
+  margin-left: 35;
+  alignContent: space-between;
+  alignSelf: stretch;
+`;
 
 

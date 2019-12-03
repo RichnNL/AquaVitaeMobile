@@ -2,6 +2,7 @@ import React from 'react';
 import {View} from "react-native";
 import { ScreenNameInput } from '../../components/Input/ScreenNameInput';
 import { useAuthenticationStore } from '../../state/stores/Authentication';
+import BackgroundView from '../../components/Views/BackgroundView';
 type Props =  {
   navigation: any;
 }
@@ -11,9 +12,9 @@ type Props =  {
 const  RegisterScreen: React.FC<Props> = (props) => {
   const authenticationStore = useAuthenticationStore();
   const name = authenticationStore.userName; 
-     return <View>
+     return <BackgroundView>
                 <ScreenNameInput defaultName={name}/>
-            </View>  
+            </BackgroundView>  
   }
 
   RegisterScreen.defaultProps = {

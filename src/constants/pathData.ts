@@ -24,6 +24,7 @@ export const PATH: IPath = {
         Logo: require('../../assets/img/logo.png'),
         Wheat: require('../../assets/img/wheat.png'),
         Bottle: require('../../assets/img/whisky.png'),
+        Monk: require('../../assets/img/monk.png'),
     },
     Backgrounds: {
         BlueGradient: require('../../assets/img/backgroundBlueGradient.png'),
@@ -73,6 +74,7 @@ export interface IPath {
         Logo: any;
         Wheat: any;
         Bottle: any;
+        Monk: any;
     },
     Backgrounds: {
         BlueGradient: any;

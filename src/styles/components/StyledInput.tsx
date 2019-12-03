@@ -1,10 +1,11 @@
 import * as Theme from './../theme/theme';
 import styledComponentsTS from 'styled-components-ts';
 import styledComponents from 'styled-components/native';
-import { TextInputAndroidProps, TextInput, TextInputProperties, View } from 'react-native';
+import { TextInputProperties, View } from 'react-native';
 import {Colors} from '../theme/colors';
 import React, { useState } from 'react';
 import RULES from '../../constants/rules';
+import { normalizeText } from '../../util/Measurements';
 
 export type StyledInputType = & TextInputProperties & {
     validated: boolean;
@@ -47,7 +48,15 @@ export const StyledInput: React.FC<StyledInputType> = (props) => {
 export const Input = styledComponentsTS<StyledInputType>(styledComponents.TextInput)`
     height: 60;
     paddingLeft: 6;
-    flex:0.8;
+    flex: 0.8;
+    paddingBottom: 0;
+    paddingRight: 10;
+    marginRight: 12;
+    paddingHorizontal: 25;
+    flexDirection: row;
+    marginBottom: 0;
+    paddingTop: 25;
+    font-size: ${normalizeText(15)};
 `;
 
 

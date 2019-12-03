@@ -53,7 +53,7 @@ export const Colors: IColorOptionsInterface =  {
     },
     dark: {
         default: '#95989b',
-        light: '#bcbec0',
+        light: '#6f370f',
         dark: '#767a7d'
     },
     google: {

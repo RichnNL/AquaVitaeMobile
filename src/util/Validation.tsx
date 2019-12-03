@@ -1,35 +1,37 @@
 import RULES from '../constants/rules';
 import ERRORCODE from '../constants/errorCode';
-export type validateType = string | true; 
-export const screenNameValid = (name: string)=> {
+
+interface IValidation {
+    screenNameValid: (name: string) => number;
+    mottoValid: (text: string) => number;
+}
+
+class Validation implements IValidation {
+    screenNameValid = (name: string)=> {
     let result = 1;
-    result = screenNameLength(name, result);
-    result = screenNameBeginWithLetters(name, result);
-    result = screenNameContainsSpecialCharacters(name, result);
+    result = this._screenNameLength(name, result);
+    result = this._screenNameBeginWithLetters(name, result);
+    result = this._screenNameContainsSpecialCharacters(name, result);
     return result;
 }
 
-const screenNameLength = (name: string, result = 1) => {
-    const expressionLength = '/^[.]{' + RULES.screenNameMinLength + 
-    ',' + RULES.screenNameMaxLength + '}$/';
-    const validator = new RegExp(expressionLength);
-    if(!validator.test(name)) {
+_screenNameLength = (name: string, result = 1) => {
+    if(name.length > RULES.screenNameMaxLength || name.length < RULES.screenNameMinLength  ) {
         result = ERRORCODE.register.screenNameLength.code;
     } 
     return result;
 }
 
-const screenNameBeginWithLetters = (name: string, result = 1) => {
-    const expression = '/^[a-zA-Z]{' + RULES.screenNameMinLength + 
-    ',' + '}$/';
-    const validator = new RegExp(expression);
+_screenNameBeginWithLetters = (name: string, result = 1) => {
+    name = name.slice(0, RULES.screenNameMinLength);
+    const validator = new RegExp(/^[a-zA-Z]+$/);
     if(!validator.test(name)) {
         result = ERRORCODE.register.screenNameBeginSytax.code;
     } 
     return result;
 }
 
-const screenNameContainsSpecialCharacters = (name: string, result = 1) => {
+_screenNameContainsSpecialCharacters = (name: string, result = 1) => {
     const validator = new RegExp(/^[\w]+$/);
     if(!validator.test(name)) {
         result = ERRORCODE.register.screenNameContainsSpeicalChars.code;
@@ -39,27 +41,30 @@ const screenNameContainsSpecialCharacters = (name: string, result = 1) => {
 
 
 
-export const mottoValid = (text: string) => {
-    let result = 1;
-    result = mottoLength(text, result);
-    result = mottoContainsSpecialCharacters(text, result);
-    return result;
+    mottoValid = (text: string) => {
+        let result = 1;
+        result = this._mottoLength(text, result);
+        result = this._mottoContainsSpecialCharacters(text, result);
+        return result;
+    }
+
+    _mottoLength = (name: string, result = 1) => {
+        const expressionLength = '/^[.]{' + RULES.mottoMinLength + 
+        ',' + RULES.mottoMaxLength + '}$/';
+        const validator = new RegExp(expressionLength);
+        if(!validator.test(name)) {
+            result = ERRORCODE.register.mottoLength.code;
+        } 
+        return result;
+    }
+
+    _mottoContainsSpecialCharacters = (name: string, result = 1) => {
+        const validator = new RegExp(/^[\w\s]+$/);
+        if(!validator.test(name)) {
+            result = ERRORCODE.register.mottoHasSpecialChars.code;
+        } 
+        return result;
+    }
 }
 
-const mottoLength = (name: string, result = 1) => {
-    const expressionLength = '/^[.]{' + RULES.mottoMinLength + 
-    ',' + RULES.mottoMaxLength + '}$/';
-    const validator = new RegExp(expressionLength);
-    if(!validator.test(name)) {
-        result = ERRORCODE.register.mottoLength.code;
-    } 
-    return result;
-}
-
-const mottoContainsSpecialCharacters = (name: string, result = 1) => {
-    const validator = new RegExp(/^[\w\s]+$/);
-    if(!validator.test(name)) {
-        result = ERRORCODE.register.mottoHasSpecialChars.code;
-    } 
-    return result;
-}
+export default new Validation;
