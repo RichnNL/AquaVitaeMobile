@@ -49,21 +49,50 @@ _screenNameContainsSpecialCharacters = (name: string, result = 1) => {
     }
 
     _mottoLength = (name: string, result = 1) => {
-        const expressionLength = '/^[.]{' + RULES.mottoMinLength + 
-        ',' + RULES.mottoMaxLength + '}$/';
-        const validator = new RegExp(expressionLength);
-        if(!validator.test(name)) {
+        if(name.length > RULES.mottoMaxLength || name.length < RULES.mottoMinLength  ) {
             result = ERRORCODE.register.mottoLength.code;
         } 
         return result;
     }
 
     _mottoContainsSpecialCharacters = (name: string, result = 1) => {
+        if(name.length === 0){
+            return result;
+        }
         const validator = new RegExp(/^[\w\s]+$/);
         if(!validator.test(name)) {
             result = ERRORCODE.register.mottoHasSpecialChars.code;
         } 
         return result;
+    }
+
+    containsOnlyLetters = (text: string) => {
+        if(text === '') {
+            return true;
+        }
+        const validator = new RegExp(/^[a-zA-Z\s]+$/);
+        return validator.test(text);
+    }
+
+    imageValid = async(url: string) => {
+        try {
+            if(url && url.length > 5) {
+                const res = await fetch(url);
+                return res.ok;
+            } else {
+                return false;
+            }
+            
+
+        }
+        catch {
+            return false;
+        }
+    }
+
+    isHexColor(hex: string) {
+        const validator = new RegExp(/^#([A-Fa-f0-9]{3}){1,2}$/);
+        return validator.test(hex);
     }
 }
 

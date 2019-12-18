@@ -38,11 +38,11 @@ const ERRORCODE: ErrorCodeType = {
        },
        mottoLength: {
          code: -23,
-         message: 'Motto too long'
+         message: 'mottoTooLong'
       },
       mottoHasSpecialChars: {
          code: -24,
-         message: 'Motto contains special characters'
+         message: 'mottoContainsSpecialCharacters'
       },
       screenNameContainsSpeicalChars: {
          code: -25,

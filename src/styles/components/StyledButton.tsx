@@ -23,7 +23,7 @@ export const ButtonContainer = styledComponentsTS<StyledButtonContainerType>(sty
 	height: 40px
 	padding: 12px;
 	border-radius: 10px;	
-	background-color:  ${Theme.backgroundColorshadow};
+	background-color:  ${Theme.backgroundColor};
 `;
 
 export const ButtonText = styledComponentsTS<StyledButtonType>(styledComponents.Text)`

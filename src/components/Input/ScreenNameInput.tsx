@@ -10,20 +10,33 @@ import useDatabaseStore from '../../state/hooks/DatabaseHook';
 import { getCodeMessage } from '../../constants/errorCode';
 import Animation from '../../util/Animation';
 import { StyledValidationText } from '../../styles/components/StyledText';
+import RULES from '../../constants/rules';
 
 type Props =  {
   defaultName?: string;
+  defaultValid: boolean;
+  validScreenNameSelected: (screenName: string) => any;
 }
 
 
 export const  ScreenNameInput: React.FC<Props> = (props) => { 
   useEffect(()=> {
-    if(props.defaultName) {
+    if(props.defaultName && !props.defaultValid) {
       let name = props.defaultName;
       name = name.trim();
       name = name.replace(/\s/g, '_');
       setScreenName(name);
       checkScreenName(name, true);
+    } else if(props.defaultName && props.defaultValid) {
+      setScreenName(props.defaultName);
+      setValid(true);
+      setStar('');
+
+      return ()=> {
+        if(timeout) {
+          clearTimeout(timeout);
+        }
+      }
     }
   }, []);
   const [screenName, setScreenName] = useState('');
@@ -79,6 +92,7 @@ export const  ScreenNameInput: React.FC<Props> = (props) => {
               if(!nameIsUnavailable) {
                 monkUp(init);
                 setAvailableMessage(textData.registration.available);
+                props.validScreenNameSelected(text);
               } else {
                 monkDown(init);
                 setAvailableMessage(textData.registration.unavailable);
@@ -103,7 +117,7 @@ export const  ScreenNameInput: React.FC<Props> = (props) => {
   }
       return (
             <StyledColCenterView>
-              <StyledRowCenterView>
+              <StyledRowCenterView border={true}>
               <StyledValidationText validated={valid}> {star} </StyledValidationText>
                 <MonkIcon rotation={rotation} translationY={translationY} size={20}/>
                 <StyledInput 
@@ -111,6 +125,7 @@ export const  ScreenNameInput: React.FC<Props> = (props) => {
                     placeholder='Screen Name'
                     defaultValue = {screenName}
                     onChangeText={textChanged}
+                    maxLength={RULES.screenNameMaxLength}
                   />
               </StyledRowCenterView>
               <StyledRowSpaceBetweenView >

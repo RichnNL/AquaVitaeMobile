@@ -6,7 +6,7 @@ import * as React from 'react';
 
 export const backgroundColor = theme.variants('theme', 'variant', {
     primary: {light: Colors.primary.default, dark: Colors.primary.dark },
-    secondary: {light: Colors.primary.light,  dark: Colors.secondary.dark }
+    secondary: {light: Colors.light.light,  dark: Colors.secondary.dark }
   });
 
 export const statusBarContent = theme('theme', {
@@ -25,7 +25,7 @@ export const backgroundColorshadow = theme.variants('theme', 'variant', {
 });
 
 export const borderColor = theme.variants('theme', 'variant', {
-  primary: {light: Colors.secondary.default, dark: Colors.primary.dark },
+  primary: {light: Colors.primary.default, dark: Colors.primary.dark },
   secondary: {light: Colors.primary.light, dark: Colors.primary.dark }
 });
   

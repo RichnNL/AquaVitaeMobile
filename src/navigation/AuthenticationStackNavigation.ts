@@ -3,7 +3,7 @@ import LandingScreen from '../screens/Landing/LandingScreen';
 import RegisterScreen from '../screens/Register/RegisterScreen';
 import PATH from '../constants/pathData';
 import Animated, { Transition, Easing } from 'react-native-reanimated';
-
+import { gestureHandlerRootHOC } from 'react-native-gesture-handler';
 let SlideFromRight = (index, position, width) => {
   const inputRange = [index - 1, index, index + 1];
   const translateX = position.interpolate({
@@ -34,14 +34,14 @@ const TransitionConfiguration = () => {
 
 const AuthenticationNavigator = createStackNavigator({
     Landing: {
-      screen: LandingScreen,
+      screen: gestureHandlerRootHOC(LandingScreen),
       path: PATH.Screens.LoggedOut.Landing,
       navigationOptions: ({ navigation }) => ({
         headerShown: false,
       }),
     },
     Register: {
-      screen: RegisterScreen,
+      screen: gestureHandlerRootHOC(RegisterScreen),
       path: PATH.Screens.LoggedOut.Register,
       navigationOptions: ({ navigation }) => ({
         headerShown: false,

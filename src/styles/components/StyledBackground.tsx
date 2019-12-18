@@ -5,7 +5,6 @@ import {StyledViewType} from './StyledView';
 import { useObserver } from 'mobx-react';
 import {Colors} from '../theme/colors';
 import { useState, useEffect, Fragment } from 'react';
-import {LinearGradient} from 'react-native-linear-gradient';
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import styledComponentsTS from 'styled-components-ts';

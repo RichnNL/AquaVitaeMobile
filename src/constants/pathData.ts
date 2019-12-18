@@ -1,5 +1,6 @@
 
 
+import {GOOGLE_API_KEY} from 'react-native-dotenv';
 export const PATH: IPath = {
     Screens: {
         LoggedIn: {
@@ -25,10 +26,13 @@ export const PATH: IPath = {
         Wheat: require('../../assets/img/wheat.png'),
         Bottle: require('../../assets/img/whisky.png'),
         Monk: require('../../assets/img/monk.png'),
+        Location: require('../../assets/img/location.png')
     },
     Backgrounds: {
         BlueGradient: require('../../assets/img/backgroundBlueGradient.png'),
         BrownGradient: require('../../assets/img/backgroundBrownGradient.png'),
+        IcecubeGraient: require('../../assets/img/Icecubebackground.png'),
+        IcecubeGraientPushed: require('../../assets/img/IcecubebackgroundPushed.png'),
     },
     Regions: {
         campbeltTown: require('../../assets/img/campbelttown.png'),
@@ -47,6 +51,44 @@ export const PATH: IPath = {
         orkney:  require('../../assets/img/orkney.png'),
         speyside:  require('../../assets/img/speyside.png'),
         tennessee:  require('../../assets/img/tennessee.png')
+    },
+    APIs: {
+        googlePlaces(searchText: string, language: string, lat: number, long: number) {
+            const api = 
+            'https://maps.googleapis.com/maps/api/place/autocomplete/json?'
+            + 'input=' + searchText 
+            + '&types=(cities)' 
+            + '&language=' + language
+            + '&key=' + GOOGLE_API_KEY 
+            + '&location=' + lat + ',' + long
+            + '&radius=12000'
+            + '&rankby=distance'
+            ;
+            return api;
+        },
+        googleSearch(language: string, lat: number, long: number) {
+            const api = 
+            'https://maps.googleapis.com/maps/api/place/nearbysearch/json?'
+            + 'type=address'
+            + '&location=' + lat + ',' + long 
+            + '&language=' + language
+            + '&key=' + GOOGLE_API_KEY 
+            + '&radius=20'
+            ;
+            return api;
+        },
+        googleDetails(language: string, placeId: string) {
+            const api =
+            'https://maps.googleapis.com/maps/api/place/details/json?'
+            + '&fields=address_component'
+            + '&place_id=' + placeId
+            + '&language=' + language
+            + '&key=' + GOOGLE_API_KEY 
+            ;
+
+            return api;
+
+        }
     }
 }
 
@@ -75,10 +117,13 @@ export interface IPath {
         Wheat: any;
         Bottle: any;
         Monk: any;
+        Location: any;
     },
     Backgrounds: {
         BlueGradient: any;
         BrownGradient: any;
+        IcecubeGraient: any;
+        IcecubeGraientPushed: any;
     },
     Regions: {
         campbeltTown: string;
@@ -97,6 +142,11 @@ export interface IPath {
         orkney:  string;
         speyside:  string;
         tennessee:  string;
+    },
+    APIs: {
+        googlePlaces: (city: string, language: string, lat: number, long: number)=> any;
+        googleSearch: (language: string, lat: number, long: number) => any;
+        googleDetails: (language: string, placeId: string) => any;
     }
 }
 

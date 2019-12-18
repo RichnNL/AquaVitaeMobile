@@ -1,24 +1,29 @@
-import React, {Fragment } from 'react';
+import React, {Fragment} from 'react';
 import PATH from '../../constants/pathData';
 import {Container} from '../../styles/components/StyledView';
 import StyledStatusBar from '../../styles/components/StyledStatusBar';
 import VariantType from '../../types/style/Variant';
 import {StyledImageBackground} from '../../styles/components/StyledBackground';
+import { ImageBackground } from 'react-native';
 type Props  = VariantType & {
-  gradient?: boolean
+  source?: any,
+  styled?: boolean,
 }
 
 
 const  BackgroundView: React.FC<Props> = (props) => { 
-  const source = (props.variant === 'primary') ? PATH.Backgrounds.BlueGradient : PATH.Backgrounds.BrownGradient;
-  
   return (
         <Fragment>
             <StyledStatusBar variant={props.variant}/>
-            {props.gradient ? (
-                <StyledImageBackground source={source}>
+            {props.source ? 
+            ( props.styled ? 
+                (<StyledImageBackground source={props.source}>
                   {props.children}
-                </StyledImageBackground> 
+                </StyledImageBackground> ) :
+                (<ImageBackground source={props.source} style={{width: '100%', height: '100%'}}>
+                   {props.children}
+                </ImageBackground>)
+                
             ) : (
               <Container variant={props.variant}>
                 {props.children}
@@ -30,7 +35,7 @@ const  BackgroundView: React.FC<Props> = (props) => {
 
   BackgroundView.defaultProps = {
     variant: 'primary',
-    gradient: false
+    styled: true
   };
 
   export default BackgroundView;

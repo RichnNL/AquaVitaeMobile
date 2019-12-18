@@ -11,8 +11,11 @@ export type StatusBarType = StyledViewType & Theme.ThemeType & {
   barStyle: 'default' | 'light-content' | 'dark-content'
 }
 
-export type CenterViewType = {
+export type CenterViewType = VariantType & {
   flex?: number
+  size?: number;
+  border?: boolean;
+  pos?: string;
 }
 
 
@@ -30,7 +33,14 @@ export const StyledColCenterView = styledComponentsTS<CenterViewType>(styledComp
       alignItems: center;
       flexDirection: column; 
       alignContent: center;
-      justifyContent: center;
+      justifyContent: ${props => props.pos ? props.pos : 'center'}; 
+      margin-right: 5%;
+      margin-left: 5%;
+      width: ${props => props.size ? props.size : 'auto'};
+      maxWidth:  ${props => props.size ? props.size : 'auto'};
+      borderRadius: 4;
+      borderWidth: ${props => props.border ? 1.25 : 0};
+      borderColor: ${Theme.borderColor};
 `;
 
 export const StyledSocialButtonView = styledComponents.View`
@@ -39,12 +49,19 @@ export const StyledSocialButtonView = styledComponents.View`
   alignItems: center;
 `;
 
-export const StyledRowCenterView = styledComponents.View`
+export const StyledRowCenterView = styledComponentsTS<CenterViewType>(styledComponents.View)`
   flexDirection: row;
-  justifyContent: center;
+  justifyContent: ${props => props.pos ? props.pos : 'center'}; 
   alignItems: center;
-  margin-right: 15;
-  margin-left: 15;
+  alignContent: center;
+  margin-right: 5%;
+  margin-left: 5%;
+  flex: ${props => props.flex || 1};
+  height: ${props => props.size ? props.size : 'auto'};
+  maxHeight:  ${props => props.size ? props.size : 'auto'};
+  borderRadius: 4;
+  borderWidth: ${props => props.border ? 1.25 : 0};
+  borderColor: ${Theme.borderColor};
 `;
 export const StyledRowSpaceBetweenView = styledComponents.View`
   flexDirection: row;
@@ -57,3 +74,10 @@ export const StyledRowSpaceBetweenView = styledComponents.View`
 `;
 
 
+StyledRowCenterView.defaultProps = {
+  variant: 'primary'
+}
+
+StyledColCenterView.defaultProps = {
+  variant: 'primary'
+}

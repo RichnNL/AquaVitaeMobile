@@ -1,16 +1,15 @@
 import React from 'react';
 import {StyledButtonType, ButtonContainer, ButtonText} from '../../styles/components/StyledButton';
-import {useLanguageStore} from '../../state/stores/Language/index';
 import {ButtonProps} from 'react-native';
+import VariantType from '../../types/style/Variant';
 
-type Props = StyledButtonType & ButtonProps &  {
+type Props = StyledButtonType & VariantType & {
   onPress: ()=> void,
   title: string
 }
 
 
 export const  ButtonAV: React.FC<Props> = (props) => { 
-  const text = useLanguageStore();
      return (
        <ButtonContainer
        variant={props.variant}
@@ -18,7 +17,7 @@ export const  ButtonAV: React.FC<Props> = (props) => {
        onPress={props.onPress}
       >
        <ButtonText 
-       type={props.variant}
+       variant={props.variant}
        btnSize={props.btnSize}
         > {props.title} </ButtonText>
      </ButtonContainer>)

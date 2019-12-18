@@ -47,8 +47,8 @@ export const Colors: IColorOptionsInterface =  {
         dark: '#9f1d35'
     },
     light: {
-        default: '#e9edf6',
-        light: '#ffffff',
+        default: '#dbe9f4',
+        light: '#e9edf6',
         dark: '#f0f0f0'
     },
     dark: {

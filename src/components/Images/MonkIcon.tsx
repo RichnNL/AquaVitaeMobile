@@ -1,7 +1,6 @@
 import React, { useState, Fragment } from 'react';
 import Animated, { Easing} from 'react-native-reanimated';
 import PATH from '../../constants/pathData';
-import { useObserver } from 'mobx-react';
 
 type Props = {
   size: number;
@@ -19,7 +18,6 @@ const  MonkIcon: React.FC<Props> = (props) => {
             source={source}
             style={{width: props.size, 
                     height: props.size, 
-                    marginTop: 30,
                     alignItems: 'center',
                     transform: [{ 
                       rotate: concat(props.rotation, 'deg'),

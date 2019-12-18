@@ -57,9 +57,9 @@ const  InitiationScreen: React.FC<Props> = (props) => {
   }, []);
 
   return useObserver(() => {
-     return <BackgroundView gradient={true} variant='primary'>
+     return <BackgroundView source={PATH.Backgrounds.BlueGradient} styled={false} variant='primary'>
               <Logo/>
-              <Image resizeMethod='resize' resizeMode='center' source={source} ></Image>
+              <Image resizeMethod='auto' resizeMode='center' source={source} ></Image>
               <StyledSubText >An App for Whisky Enthusiasts</StyledSubText>
             </BackgroundView>
   });
