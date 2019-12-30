@@ -2202,10 +2202,10 @@ commander@~2.13.0:
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.13.0.tgz#6964bca67685df7c1f1430c584f07d7597885b9c"
   integrity sha512-MVuS359B+YzaWqjCL/c+22gfryv+mCBPHAv3zyVI2GN8EY6IRP8VwtasXn8jyyhvvq84R4ImN1OKRtcbIasjYA==
 
-commander@~2.19.0:
-  version "2.19.0"
-  resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
-  integrity sha512-6tvAOO+D6OENvRAh524Dh9jcfKTYDQAqvqezbCW82xj5X0pSrcpxtvRKHLG0yBY6SD7PSDrJaj+0AiOcKVd1Xg==
+commander@~2.20.3:
+  version "2.20.3"
+  resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+  integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -3235,9 +3235,9 @@ hammerjs@^2.0.8:
   integrity sha1-BO93hiz/K7edMPdpIJWTAiK/YPE=
 
 handlebars@^4.1.2:
-  version "4.2.0"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.2.0.tgz#57ce8d2175b9bbb3d8b3cf3e4217b1aec8ddcb2e"
-  integrity sha512-Kb4xn5Qh1cxAKvQnzNWZ512DhABzyFNmsaJf3OAkWNa4NkaqWcNI8Tao8Tasi0/F4JD9oyG0YxuFyvyR57d+Gw==
+  version "4.5.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.5.3.tgz#5cf75bd8714f7605713511a56be7c349becb0482"
+  integrity sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -4992,9 +4992,9 @@ negotiator@0.6.1:
   integrity sha1-KzJxhOiZIQEXeyhWP7XnECrNDKk=
 
 neo-async@^2.6.0:
-  version "2.6.0"
-  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.0.tgz#b9d15e4d71c6762908654b5183ed38b753340835"
-  integrity sha512-MFh0d/Wa7vkKO3Y3LlacqAEeHK0mckVqzDieUKTT+KGxi+zIpeVsFxymkIiRpbpDziHc290Xr9A1O4Om7otoRA==
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.1.tgz#ac27ada66167fa8849a6addd837f6b189ad2081c"
+  integrity sha512-iyam8fBuCUpWeKPGpaNMetEocMt364qkCsfL9JuhjXX6dRnguRVOfk2GZaDpPjcOKiiXCPINZC1GczQ7iTq3Zw==
 
 nice-try@^1.0.4:
   version "1.0.5"
@@ -5698,6 +5698,13 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-animatable@1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.3.tgz#a13a4af8258e3bb14d0a9d839917e9bb9274ec8a"
+  integrity sha512-2ckIxZQAsvWn25Ho+DK3d1mXIgj7tITkrS4pYDvx96WyOttSvzzFeQnM2od0+FUMzILbdHDsDEqZvnz1DYNQ1w==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-fbsdk@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-1.1.1.tgz#91a787a046bc90d29907a2269321191cd301517c"
@@ -5726,6 +5733,14 @@ react-native-linear-gradient@^2.5.6:
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
   integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
 
+react-native-modal@^11.5.3:
+  version "11.5.3"
+  resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-11.5.3.tgz#28b4c761680a165eaf1d2c0fb08e272c0191b39f"
+  integrity sha512-U6RghSkZUZ6c0LHMbwAnVscEwGoI58eXfBstVs18t50miV0GmLcJhIOu5OND+SDGVkBQFiGFRu/pTUJaA7wfGw==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-animatable "1.3.3"
+
 react-native-navigation@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-3.3.0.tgz#0968a62489bcab5e1af9b80c589bea8ba1339a89"
@@ -5736,11 +5751,6 @@ react-native-navigation@^3.3.0:
     prop-types "15.x.x"
     react-lifecycles-compat "2.0.0"
     tslib "1.9.3"
-
-react-native-orientation-loading-overlay@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/react-native-orientation-loading-overlay/-/react-native-orientation-loading-overlay-0.1.6.tgz#fe8900828c28aa786c822dadf6fe55401f59da8e"
-  integrity sha512-SbsBFnZIejF/zZy3nL2vmmZkUovQ9ed28b6p2x8ZhAYoseHyO3dS0iahhPu1eSneGE2+XVw+zoKHmxOmVFmKXw==
 
 react-native-orientation-locker@^1.1.7:
   version "1.1.7"
@@ -6957,11 +6967,11 @@ uglify-es@^3.1.9:
     source-map "~0.6.1"
 
 uglify-js@^3.1.4:
-  version "3.5.3"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.5.3.tgz#d490bb5347f23025f0c1bc0dee901d98e4d6b063"
-  integrity sha512-rIQPT2UMDnk4jRX+w4WO84/pebU2jiLsjgIyrCktYgSvx28enOE3iYQMr+BD1rHiitWnDmpu0cY/LfIEpKcjcw==
+  version "3.7.3"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.7.3.tgz#f918fce9182f466d5140f24bb0ff35c2d32dcc6a"
+  integrity sha512-7tINm46/3puUA4hCkKYo4Xdts+JDaVC9ZPRcG8Xw9R4nhO/gZgUM3TENq8IF4Vatk8qCig4MzP/c8G4u2BkVQg==
   dependencies:
-    commander "~2.19.0"
+    commander "~2.20.3"
     source-map "~0.6.1"
 
 ultron@1.0.x:
