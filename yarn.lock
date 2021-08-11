@@ -5440,9 +5440,9 @@ path-key@^2.0.0, path-key@^2.0.1:
   integrity sha1-QRyttXTFoUDTpLGRDUDYDMn0C0A=
 
 path-parse@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.6.tgz#d62dbb5679405d72c4737ec58600e9ddcf06d24c"
-  integrity sha512-GSmOT2EbHrINBf9SR7CDELwlJ8AENk3Qn7OikK4nFYAu3Ote2+JYNVvkpAEQm3/TLNEJFD/xZJjzyxg3KBWOzw==
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/path-parse/-/path-parse-1.0.7.tgz#fbc114b60ca42b30d9daf5858e4bd68bbedb6735"
+  integrity sha512-LDJzPVEEEPR+y48z93A0Ed0yXb8pAByGWo/k5YYdYgpY2/2EsOsksJrq7lOHxryrVOn1ejG6oAp8ahvOIQD8sw==
 
 path-to-regexp@^1.7.0:
   version "1.7.0"
@@ -5698,6 +5698,13 @@ react-lifecycles-compat@^3.0.4:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-animatable@1.3.3:
+  version "1.3.3"
+  resolved "https://registry.yarnpkg.com/react-native-animatable/-/react-native-animatable-1.3.3.tgz#a13a4af8258e3bb14d0a9d839917e9bb9274ec8a"
+  integrity sha512-2ckIxZQAsvWn25Ho+DK3d1mXIgj7tITkrS4pYDvx96WyOttSvzzFeQnM2od0+FUMzILbdHDsDEqZvnz1DYNQ1w==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-native-fbsdk@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/react-native-fbsdk/-/react-native-fbsdk-1.1.1.tgz#91a787a046bc90d29907a2269321191cd301517c"
@@ -5726,6 +5733,14 @@ react-native-linear-gradient@^2.5.6:
   resolved "https://registry.yarnpkg.com/react-native-linear-gradient/-/react-native-linear-gradient-2.5.6.tgz#96215cbc5ec7a01247a20890888aa75b834d44a0"
   integrity sha512-HDwEaXcQIuXXCV70O+bK1rizFong3wj+5Q/jSyifKFLg0VWF95xh8XQgfzXwtq0NggL9vNjPKXa016KuFu+VFg==
 
+react-native-modal@^11.5.3:
+  version "11.10.0"
+  resolved "https://registry.yarnpkg.com/react-native-modal/-/react-native-modal-11.10.0.tgz#94a6d3a2428ba5228cfb4dc174cacea79c871591"
+  integrity sha512-syRYDJYSh16bR37R5EKU9T/wC+5bEOfF17IUqf5URdhbEDd+hxyMInC++l45E8oI+MtdOaEp9yAws5xDqk8dnA==
+  dependencies:
+    prop-types "^15.6.2"
+    react-native-animatable "1.3.3"
+
 react-native-navigation@^3.3.0:
   version "3.3.0"
   resolved "https://registry.yarnpkg.com/react-native-navigation/-/react-native-navigation-3.3.0.tgz#0968a62489bcab5e1af9b80c589bea8ba1339a89"
@@ -5736,11 +5751,6 @@ react-native-navigation@^3.3.0:
     prop-types "15.x.x"
     react-lifecycles-compat "2.0.0"
     tslib "1.9.3"
-
-react-native-orientation-loading-overlay@^0.1.6:
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/react-native-orientation-loading-overlay/-/react-native-orientation-loading-overlay-0.1.6.tgz#fe8900828c28aa786c822dadf6fe55401f59da8e"
-  integrity sha512-SbsBFnZIejF/zZy3nL2vmmZkUovQ9ed28b6p2x8ZhAYoseHyO3dS0iahhPu1eSneGE2+XVw+zoKHmxOmVFmKXw==
 
 react-native-orientation-locker@^1.1.7:
   version "1.1.7"
